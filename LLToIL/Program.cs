@@ -47,7 +47,12 @@ public unsafe class Program
 
 	static void Main(string[] args)
 	{
+#if true
+		//args = new[] { "D:\\test.ll" };
+#endif
+
 		if (args.Length == 0) throw new Exception("USE: LLToIL path/to/code.ll");
+
 		var prog = args[0];
 		var progname = new FileInfo(prog).Name;
 
@@ -67,8 +72,6 @@ public unsafe class Program
 			var function = module.FirstFunction;
 			while (function.Handle != IntPtr.Zero)
 			{
-				//var rettype = GetSlot(function.LastBasicBlock.Terminator.ToString(), 1);
-
 				var ret = function;
 
 				string funcname = function.Name;
@@ -83,10 +86,10 @@ public unsafe class Program
 
 				if (function.ToString().Split(')', StringSplitOptions.RemoveEmptyEntries)[0].Contains("...")) // shitcode
 				{
-					if (function.BasicBlocksCount == 0)
-						methodsig.CallingConvention = dnlib.DotNet.CallingConvention.NativeVarArg;
-					else
-						methodsig.CallingConvention = dnlib.DotNet.CallingConvention.VarArg;
+					//if (function.BasicBlocksCount == 0)
+					//	methodsig.CallingConvention = dnlib.DotNet.CallingConvention.NativeVarArg;
+					//else
+					methodsig.CallingConvention = dnlib.DotNet.CallingConvention.VarArg;
 				}
 
 				MethodDefUser sharpmethod = new MethodDefUser(funcname, methodsig);
@@ -108,14 +111,12 @@ public unsafe class Program
 			}
 
 			var field = module.FirstGlobal;
-			//var a = field.Initializer.GetAggregateElement(1); to get item at index
 			while (field.Handle != IntPtr.Zero)
 			{
 				CreateField(field);
 
 				field = field.NextGlobal;
 			}
-			//_ = true; // for debug point
 		}
 
 		var initVars = new MethodDefUser("CreateVars", MethodSig.CreateStatic(assembly.CorLibTypes.Void));
@@ -207,8 +208,11 @@ public unsafe class Program
 									instructions.Add(ILInstruction.Create(OpCodes.Ldc_I4, 8));
 								else if (!rettype.IsPrimitive)
 								{
-									var typesize = TypeCache[_rettype].CalcSize();
-									instructions.Add(ILInstruction.Create(OpCodes.Ldc_I4, (int)(operand.ConstIntSExt * typesize)));
+									//var typesize = TypeCache[_rettype].CalcSize();
+									//instructions.Add(ILInstruction.Create(OpCodes.Ldc_I4, (int)(operand.ConstIntSExt * typesize)));
+									instructions.Add(ILInstruction.Create(OpCodes.Sizeof, rettype.ToTypeDefOrRef()));
+									instructions.Add(ILInstruction.Create(OpCodes.Ldc_I4, (int)operand.ConstIntSExt));
+									instructions.Add(ILInstruction.Create(OpCodes.Mul));
 								}
 								else
 									instructions.Add(ILInstruction.Create(OpCodes.Ldc_I4, (int)((int)operand.ConstIntSExt * (int)operand.TypeOf.IntWidth / 8)));
@@ -227,9 +231,14 @@ public unsafe class Program
 
 								var what = GetSlot(instr.ToString(), 1);
 
-								var tothis = LoadValue(op1, sharp);
-								//var savethis = LoadValue(op0, sharp, what == "ptr" ? true : false);
+								var tothis = LoadValue(op1, sharp); 
+								var tothisInstruction = instructions.Last();
 								var savethis = LoadValue(op0, sharp);
+								var savethisInstruction = instructions.Last();
+
+								if (tothis.TypeName == "IntPtr" && savethis.TypeName != "IntPtr")
+									FixType(tothisInstruction, savethis);
+
 								switch (savethis.TypeName)
 								{
 									case "Byte":
@@ -264,8 +273,6 @@ public unsafe class Program
 							{
 								var from = LoadValue(instr.GetOperand(0), sharp);
 								var what = GetSlot(instr.ToString(), 2);
-								//if (what == "ptr")
-								//	instructions.Add(ILInstruction.Create(OpCodes.Ldind_I8));
 								switch (from.TypeName)
 								{
 									case "Byte":
@@ -428,6 +435,22 @@ public unsafe class Program
 									default:
 										throw new NotImplementedException();
 								}
+								SaveValue(instr, sharp);
+								break;
+							}
+
+						case LLVMOpcode.LLVMFPExt:
+							{
+								LoadValue(instr.GetOperand(0), sharp);
+								instructions.Add(ILInstruction.Create(OpCodes.Conv_R8));
+								SaveValue(instr, sharp);
+								break;
+							}
+
+						case LLVMOpcode.LLVMFPTrunc:
+							{
+								LoadValue(instr.GetOperand(0), sharp);
+								instructions.Add(ILInstruction.Create(OpCodes.Conv_R4));
 								SaveValue(instr, sharp);
 								break;
 							}
@@ -658,23 +681,91 @@ public unsafe class Program
 						case LLVMOpcode.LLVMGetElementPtr:
 							{
 								var what = instr.GetOperand(0);
+								var lv = LoadValue(what, sharp, false);
+
 								LLVMTypeRef inType = LLVM.GetGEPSourceElementType(instr);
-								LoadValue(what, sharp, false);
+								TypeDefUser resolved = TypeDataFromTypeOf(inType)?.inSharp;
 
-								for(uint i = 1; i < instr.OperandCount; i++)
+								uint start = lv.IsPointer ? 2u : 1u;
+
+								if (start == 2u)
 								{
-									LoadValue(instr.GetOperand(i), sharp, false);
-									body.Instructions.Add(ILInstruction.CreateLdcI4(SizeFromTypeOf(inType)));
-									body.Instructions.Add(ILInstruction.Create(OpCodes.Mul));
-									body.Instructions.Add(ILInstruction.Create(OpCodes.Add));
-
-									if (inType.ArrayLength > 0)
+									var at = instr.GetOperand(1);
+									if (at.IsConstant && at.ConstIntSExt == 0) { }
+									else
 									{
-										inType = inType.ElementType;
+										LoadValue(at, sharp, false);
+										body.Instructions.Add(ILInstruction.CreateLdcI4(SizeFromTypeOf(inType)));
+										body.Instructions.Add(ILInstruction.Create(OpCodes.Mul));
+										body.Instructions.Add(ILInstruction.Create(OpCodes.Add));
+									}
+								}
+
+								for (uint i = start; i < instr.OperandCount; i++)
+								{
+									tryagain:
+									if (resolved == null)
+									{
+										LoadValue(instr.GetOperand(i), sharp, false);
+										var val = body.Instructions.Last();
+										body.Instructions.Add(ILInstruction.CreateLdcI4(SizeFromTypeOf(inType)));
+										body.Instructions.Add(ILInstruction.Create(OpCodes.Mul));
+										body.Instructions.Add(ILInstruction.Create(OpCodes.Add));
+
+										bool isldc = val.IsLdcI4();
+										int ldcval = isldc ? val.GetLdcI4Value() : 0;
+										recurse:
+										if (inType.ArrayLength > 0)
+											inType = inType.ElementType;
+										else if (inType.StructElementTypesCount > 0 && isldc)
+										{
+											if (ldcval < inType.StructElementTypesCount)
+												inType = inType.StructElementTypes[ldcval];
+											else
+											{
+												ldcval = ldcval - (int)inType.StructElementTypesCount;
+												inType = inType.StructElementTypes.Last();
+												goto recurse;
+											}
+										}
+										else
+										{
+											//inType = LLVMTypeRef.Int64; // intptr basic size
+											Console.WriteLine("*unknown type*");
+										}
+									}
+									else
+									{
+										var at = instr.GetOperand(i);
+										if (at.IsAInstruction.Handle != IntPtr.Zero)
+										{
+#if DEBUG
+											Console.WriteLine("*bad GEP*");
+#endif
+											resolved = null; // very bad thing
+											goto tryagain;
+										}
+										if (resolved.Fields.Count <= (int)at.ConstIntSExt)
+										{
+											resolved = null; // bad thing
+											goto tryagain;
+										}
+
+										var id = (int)at.ConstIntSExt;
+										var field = resolved.Fields[id];
+										body.Instructions.Add(ILInstruction.Create(OpCodes.Ldflda, field));
+										resolved = field.FieldType.ToTypeDefOrRef() as TypeDefUser;
+										if (inType.ArrayLength > 0)
+											inType = inType.ElementType;
+										else if (inType.StructElementTypesCount > 0)
+											inType = inType.StructElementTypes[id];
 									}
 								}
 
 								SaveValue(instr, sharp, false);
+
+								if (resolved != null)
+									FixType(instructions.Last(), resolved.ToTypeSig());
 								break;
 							}
 
@@ -769,13 +860,6 @@ public unsafe class Program
 
 						case LLVMOpcode.LLVMCall:
 							{
-								//List<LLVMValueRef> operands = new List<LLVMValueRef>(); // for debug
-								//for (uint i = 0; i < instr.OperandCount - 1; i++)
-								//	operands.Add(instr.GetOperand(i));
-
-								//foreach(var i in operands)
-								//	LoadValue(i, sharp);
-
 								var call = instr.GetOperand((uint)instr.OperandCount - 1);
 
 								bool isPtrCall = call.IsAFunction.Handle == IntPtr.Zero;
@@ -826,7 +910,7 @@ public unsafe class Program
 								if (sharptarget.Name == "llvm.va_start") // inline instrincis
 								{
 									instructions.Add(ILInstruction.Create(OpCodes.Arglist));
-									instructions.Add(ILInstruction.Create(OpCodes.Conv_U));
+									//instructions.Add(ILInstruction.Create(OpCodes.Conv_U));
 									var loc = new Local(assembly.CorLibTypes.IntPtr, "ref_arglist");
 									body.Variables.Add(loc);
 									instructions.Add(ILInstruction.Create(OpCodes.Stloc, loc));
@@ -1084,6 +1168,20 @@ public unsafe class Program
 		//Console.ReadLine();
 	}
 
+	private static void FixType(ILInstruction tothisInstruction, TypeSig savethis)
+	{
+		if (tothisInstruction.IsLdarg())
+			((Parameter)tothisInstruction.Operand).Type = new PtrSig(savethis);
+		else if (tothisInstruction.IsLdloc())
+			((Local)tothisInstruction.Operand).Type = new PtrSig(savethis);
+		else if (tothisInstruction.IsStarg())
+			((Parameter)tothisInstruction.Operand).Type = new PtrSig(savethis);
+		else if (tothisInstruction.IsStloc())
+			((Local)tothisInstruction.Operand).Type = new PtrSig(savethis);
+		else throw new Exception();
+		return;
+	}
+
 	private static void CreateField(LLVMValueRef field)
 	{
 		var fieldsig = new FieldSig(TypeSigFromTypeOf(field.Initializer.TypeOf));
@@ -1125,7 +1223,9 @@ public unsafe class Program
 		if (TypeCache.ContainsKey(typeOf))
 			return TypeCache[typeOf];
 		TypeSigFromTypeOf(typeOf);
-		return TypeCache[typeOf];
+		if (TypeCache.ContainsKey(typeOf))
+			return TypeCache[typeOf];
+		return null;
 	}
 
 	static TypeSig TypeSigFromTypeOf(LLVMTypeRef typeOf, bool forfunc = false)
@@ -1138,18 +1238,39 @@ public unsafe class Program
 		if (typeOf.Kind == LLVMTypeKind.LLVMIntegerTypeKind)
 		{
 			var size = typeOf.IntWidth;
-			if (size == 1) return assembly.CorLibTypes.Boolean;
-			if (size > 1 && size <= 8) return assembly.CorLibTypes.Byte;
-			if (size > 8 && size <= 16) return assembly.CorLibTypes.Int16;
-			if (size > 16 && size <= 32) return assembly.CorLibTypes.Int32;
-			if (size > 32 && size <= 64) return assembly.CorLibTypes.Int64;
+			if (size == 1)
+			{
+				return assembly.CorLibTypes.Boolean;
+			}
+			if (size > 1 && size <= 8)
+			{
+				return assembly.CorLibTypes.Byte;
+			}
+			if (size > 8 && size <= 16)
+			{
+				return assembly.CorLibTypes.Int16;
+			}
+			if (size > 16 && size <= 32)
+			{
+				return assembly.CorLibTypes.Int32;
+			}
+			if (size > 32 && size <= 64)
+			{
+				return assembly.CorLibTypes.Int64;
+			}
 		}
 		if (typeOf.Kind == LLVMTypeKind.LLVMPointerTypeKind)
+		{
 			return assembly.CorLibTypes.IntPtr;
+		}
 		if (typeOf.Kind == LLVMTypeKind.LLVMFloatTypeKind)
+		{
 			return assembly.CorLibTypes.Single;
+		}
 		if (typeOf.Kind == LLVMTypeKind.LLVMDoubleTypeKind)
+		{
 			return assembly.CorLibTypes.Double;
+		}
 
 		if (typeOf.Kind == LLVMTypeKind.LLVMArrayTypeKind)
 		{
@@ -1426,6 +1547,26 @@ public unsafe class Program
 			case "i32":
 				method.Body.Instructions.Add(ILInstruction.Create(OpCodes.Ldc_I4, wtf ? (int)instr.GetOperand(0).ConstIntSExt : (int)instr.ConstIntSExt));
 				return assembly.CorLibTypes.Int32;
+			case "float":
+				{
+					int a = 0;
+					var i = wtf ? instr.GetOperand(0) : instr;
+					if (i.IsNull)
+						method.Body.Instructions.Add(ILInstruction.Create(OpCodes.Ldc_R4, (float)0));
+					else
+						method.Body.Instructions.Add(ILInstruction.Create(OpCodes.Ldc_R4, (float)LLVM.ConstRealGetDouble(i, &a))); 
+					return assembly.CorLibTypes.Single;
+				}
+			case "double":
+				{
+					int b = 0;
+					var i = wtf ? instr.GetOperand(0) : instr;
+					if (i.IsNull)
+						method.Body.Instructions.Add(ILInstruction.Create(OpCodes.Ldc_R8, (double)0));
+					else
+						method.Body.Instructions.Add(ILInstruction.Create(OpCodes.Ldc_R8, LLVM.ConstRealGetDouble(i, &b)));
+					return assembly.CorLibTypes.Double;
+				}
 			case "ptr":
 			case "i64":
 				method.Body.Instructions.Add(ILInstruction.Create(OpCodes.Ldc_I8, wtf ? (long)instr.GetOperand(0).ConstIntSExt : (long)instr.ConstIntSExt));

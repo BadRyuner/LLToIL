@@ -359,17 +359,17 @@ public class Main
 {
 	public unsafe static int main(int %0, IntPtr %1)
 	{
-		Struct_class_std__basic_string* ptr = stackalloc Struct_class_std__basic_string[8];
-		Struct_class_std__basic_string* ptr2 = stackalloc Struct_class_std__basic_string[8];
-		Struct_class_std__basic_string* ptr3 = stackalloc Struct_class_std__basic_string[8];
+		Struct_class_std__basic_string* ptr = stackalloc Struct_class_std__basic_string[sizeof(Struct_class_std__basic_string) * 1];
+		Struct_class_std__basic_string* ptr2 = stackalloc Struct_class_std__basic_string[sizeof(Struct_class_std__basic_string) * 1];
+		Struct_class_std__basic_string* ptr3 = stackalloc Struct_class_std__basic_string[sizeof(Struct_class_std__basic_string) * 1];
 		IntPtr intPtr = *%1;
 		int num = global::Main.atoi(intPtr);
 		int num2 = global::Main.printf(global::Main.___C__0BD_NPMPEDPJ_Fibonacci_5Series_3_5__AA_, __arglist());
 		if (num >= 1)
 		{
-			IntPtr intPtr2 = ptr2 + 0 * 28 / sizeof(Struct_class_std__basic_string) + 2 * 28 / sizeof(Struct_class_std__basic_string);
-			IntPtr intPtr3 = ptr + 0 * 28 / sizeof(Struct_class_std__basic_string) + 2 * 28 / sizeof(Struct_class_std__basic_string);
-			IntPtr intPtr4 = ptr3 + 0 * 28 / sizeof(Struct_class_std__basic_string) + 2 * 28 / sizeof(Struct_class_std__basic_string);
+			Struct_class_std__basic_string* ptr4 = ptr2;
+			Struct_class_std__basic_string* ptr5 = ptr;
+			Struct_class_std__basic_string* ptr6 = ptr3;
 			byte b = 1;
 			for (;;)
 			{
@@ -414,61 +414,61 @@ public class Main
 						num12 = num8 + num11;
 						global::Main.llvm_lifetime_start_p0(24L, ptr3);
 						global::Main.??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(ptr3, num12);
-						int num13 = (int)(*intPtr4);
-						bool flag = (UIntPtr)num13 > (UIntPtr)15;
-						IntPtr intPtr5 = *(IntPtr*)ptr3;
-						IntPtr intPtr6 = intPtr5;
+						int element_ = ((Struct_class_std___String_val*)ptr6)->element_2;
+						bool flag = (UIntPtr)element_ > (UIntPtr)15;
+						IntPtr intPtr2 = *(IntPtr*)ptr3;
+						IntPtr intPtr3 = intPtr2;
 						if (!flag)
 						{
-							intPtr6 = ptr3;
+							intPtr3 = ptr3;
 						}
-						IntPtr intPtr7 = intPtr6;
-						int num14 = global::Main.printf(intPtr7, __arglist());
-						int num15 = (int)(*intPtr4);
-						if ((UIntPtr)num15 > (UIntPtr)15)
+						IntPtr intPtr4 = intPtr3;
+						int num13 = global::Main.printf(intPtr4, __arglist());
+						int element_2 = ((Struct_class_std___String_val*)ptr6)->element_2;
+						if ((UIntPtr)element_2 > (UIntPtr)15)
 						{
-							IntPtr intPtr8 = *(IntPtr*)ptr3;
-							int num16 = num15 + 1;
-							bool flag2 = (UIntPtr)num16 > (UIntPtr)4095;
+							IntPtr intPtr5 = *(IntPtr*)ptr3;
+							int num14 = element_2 + 1;
+							bool flag2 = (UIntPtr)num14 > (UIntPtr)4095;
 							b = 19;
-							int num21;
-							IntPtr intPtr10;
+							int num19;
+							IntPtr intPtr7;
 							if (flag2)
 							{
-								IntPtr intPtr9 = intPtr8 + -1 * 4;
-								int num17 = (int)(*intPtr9);
-								int num18 = (int)intPtr8;
-								int num19 = num18 + -4;
-								int num20 = num19 - num17;
-								if ((UIntPtr)num20 >= (UIntPtr)32)
+								IntPtr intPtr6 = intPtr5 + -1 * 4;
+								int num15 = (int)(*intPtr6);
+								int num16 = (int)intPtr5;
+								int num17 = num16 + -4;
+								int num18 = num17 - num15;
+								if ((UIntPtr)num18 >= (UIntPtr)32)
 								{
 									goto Block_29;
 								}
-								num21 = num15 + 36;
-								intPtr10 = (IntPtr)num17;
+								num19 = element_2 + 36;
+								intPtr7 = (IntPtr)num15;
 								b = 22;
 							}
-							int num22 = num21;
+							int num20 = num19;
 							if (b != 22)
 							{
-								num22 = num16;
+								num20 = num14;
 								if (b != 19)
 								{
 									goto Block_31;
 								}
 							}
-							int num23 = num22;
-							IntPtr intPtr11 = intPtr10;
+							int num21 = num20;
+							IntPtr intPtr8 = intPtr7;
 							if (b != 22)
 							{
-								intPtr11 = intPtr8;
+								intPtr8 = intPtr5;
 								if (b != 19)
 								{
 									goto Block_33;
 								}
 							}
-							IntPtr intPtr12 = intPtr11;
-							global::Main.DELETE(intPtr12, num23);
+							IntPtr intPtr9 = intPtr8;
+							global::Main.DELETE(intPtr9, num21);
 						}
 						global::Main.llvm_lifetime_end_p0(24L, ptr3);
 						b = 24;
@@ -477,61 +477,61 @@ public class Main
 					{
 						global::Main.llvm_lifetime_start_p0(24L, ptr2);
 						global::Main.??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(ptr2, num8);
-						int num24 = (int)(*intPtr2);
-						bool flag3 = (UIntPtr)num24 > (UIntPtr)15;
-						IntPtr intPtr13 = *(IntPtr*)ptr2;
-						IntPtr intPtr14 = intPtr13;
+						int element_3 = ((Struct_class_std___String_val*)ptr4)->element_2;
+						bool flag3 = (UIntPtr)element_3 > (UIntPtr)15;
+						IntPtr intPtr10 = *(IntPtr*)ptr2;
+						IntPtr intPtr11 = intPtr10;
 						if (!flag3)
 						{
-							intPtr14 = ptr2;
+							intPtr11 = ptr2;
 						}
-						IntPtr intPtr15 = intPtr14;
-						int num25 = global::Main.printf(intPtr15, __arglist());
-						int num26 = (int)(*intPtr2);
-						if ((UIntPtr)num26 > (UIntPtr)15)
+						IntPtr intPtr12 = intPtr11;
+						int num22 = global::Main.printf(intPtr12, __arglist());
+						int element_4 = ((Struct_class_std___String_val*)ptr4)->element_2;
+						if ((UIntPtr)element_4 > (UIntPtr)15)
 						{
-							IntPtr intPtr16 = *(IntPtr*)ptr2;
-							int num27 = num26 + 1;
-							bool flag4 = (UIntPtr)num27 > (UIntPtr)4095;
+							IntPtr intPtr13 = *(IntPtr*)ptr2;
+							int num23 = element_4 + 1;
+							bool flag4 = (UIntPtr)num23 > (UIntPtr)4095;
 							b = 12;
-							int num32;
-							IntPtr intPtr18;
+							int num28;
+							IntPtr intPtr15;
 							if (flag4)
 							{
-								IntPtr intPtr17 = intPtr16 + -1 * 4;
-								int num28 = (int)(*intPtr17);
-								int num29 = (int)intPtr16;
-								int num30 = num29 + -4;
-								int num31 = num30 - num28;
-								if ((UIntPtr)num31 >= (UIntPtr)32)
+								IntPtr intPtr14 = intPtr13 + -1 * 4;
+								int num24 = (int)(*intPtr14);
+								int num25 = (int)intPtr13;
+								int num26 = num25 + -4;
+								int num27 = num26 - num24;
+								if ((UIntPtr)num27 >= (UIntPtr)32)
 								{
 									goto Block_21;
 								}
-								num32 = num26 + 36;
-								intPtr18 = (IntPtr)num28;
+								num28 = element_4 + 36;
+								intPtr15 = (IntPtr)num24;
 								b = 15;
 							}
-							int num33 = num32;
+							int num29 = num28;
 							if (b != 15)
 							{
-								num33 = num27;
+								num29 = num23;
 								if (b != 12)
 								{
 									goto Block_23;
 								}
 							}
-							int num34 = num33;
-							IntPtr intPtr19 = intPtr18;
+							int num30 = num29;
+							IntPtr intPtr16 = intPtr15;
 							if (b != 15)
 							{
-								intPtr19 = intPtr16;
+								intPtr16 = intPtr13;
 								if (b != 12)
 								{
 									goto Block_25;
 								}
 							}
-							IntPtr intPtr20 = intPtr19;
-							global::Main.DELETE(intPtr20, num34);
+							IntPtr intPtr17 = intPtr16;
+							global::Main.DELETE(intPtr17, num30);
 						}
 						global::Main.llvm_lifetime_end_p0(24L, ptr2);
 						b = 17;
@@ -541,94 +541,94 @@ public class Main
 				{
 					global::Main.llvm_lifetime_start_p0(24L, ptr);
 					global::Main.??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(ptr, num11);
-					int num35 = (int)(*intPtr3);
-					bool flag5 = (UIntPtr)num35 > (UIntPtr)15;
-					IntPtr intPtr21 = *(IntPtr*)ptr;
-					IntPtr intPtr22 = intPtr21;
+					int element_5 = ((Struct_class_std___String_val*)ptr5)->element_2;
+					bool flag5 = (UIntPtr)element_5 > (UIntPtr)15;
+					IntPtr intPtr18 = *(IntPtr*)ptr;
+					IntPtr intPtr19 = intPtr18;
 					if (!flag5)
 					{
-						intPtr22 = ptr;
+						intPtr19 = ptr;
 					}
-					IntPtr intPtr23 = intPtr22;
-					int num36 = global::Main.printf(intPtr23, __arglist());
-					int num37 = (int)(*intPtr3);
-					if ((UIntPtr)num37 > (UIntPtr)15)
+					IntPtr intPtr20 = intPtr19;
+					int num31 = global::Main.printf(intPtr20, __arglist());
+					int element_6 = ((Struct_class_std___String_val*)ptr5)->element_2;
+					if ((UIntPtr)element_6 > (UIntPtr)15)
 					{
-						IntPtr intPtr24 = *(IntPtr*)ptr;
-						int num38 = num37 + 1;
-						bool flag6 = (UIntPtr)num38 > (UIntPtr)4095;
+						IntPtr intPtr21 = *(IntPtr*)ptr;
+						int num32 = element_6 + 1;
+						bool flag6 = (UIntPtr)num32 > (UIntPtr)4095;
 						b = 5;
-						int num43;
-						IntPtr intPtr26;
+						int num37;
+						IntPtr intPtr23;
 						if (flag6)
 						{
-							IntPtr intPtr25 = intPtr24 + -1 * 4;
-							int num39 = (int)(*intPtr25);
-							int num40 = (int)intPtr24;
-							int num41 = num40 + -4;
-							int num42 = num41 - num39;
-							if ((UIntPtr)num42 >= (UIntPtr)32)
+							IntPtr intPtr22 = intPtr21 + -1 * 4;
+							int num33 = (int)(*intPtr22);
+							int num34 = (int)intPtr21;
+							int num35 = num34 + -4;
+							int num36 = num35 - num33;
+							if ((UIntPtr)num36 >= (UIntPtr)32)
 							{
 								goto Block_13;
 							}
-							num43 = num37 + 36;
-							intPtr26 = (IntPtr)num39;
+							num37 = element_6 + 36;
+							intPtr23 = (IntPtr)num33;
 							b = 8;
 						}
-						int num44 = num43;
+						int num38 = num37;
 						if (b != 8)
 						{
-							num44 = num38;
+							num38 = num32;
 							if (b != 5)
 							{
 								goto Block_15;
 							}
 						}
-						int num45 = num44;
-						IntPtr intPtr27 = intPtr26;
+						int num39 = num38;
+						IntPtr intPtr24 = intPtr23;
 						if (b != 8)
 						{
-							intPtr27 = intPtr24;
+							intPtr24 = intPtr21;
 							if (b != 5)
 							{
 								goto Block_17;
 							}
 						}
-						IntPtr intPtr28 = intPtr27;
-						global::Main.DELETE(intPtr28, num45);
+						IntPtr intPtr25 = intPtr24;
+						global::Main.DELETE(intPtr25, num39);
 					}
 					global::Main.llvm_lifetime_end_p0(24L, ptr);
 					b = 10;
 				}
-				int num46 = num11;
+				int num40 = num11;
 				if (b != 10)
 				{
-					num46 = num11;
+					num40 = num11;
 					if (b != 17)
 					{
-						num46 = num8;
+						num40 = num8;
 						if (b != 24)
 						{
 							goto Block_36;
 						}
 					}
 				}
-				num10 = num46;
-				int num47 = num8;
+				num10 = num40;
+				int num41 = num8;
 				if (b != 10)
 				{
-					num47 = num8;
+					num41 = num8;
 					if (b != 17)
 					{
-						num47 = num12;
+						num41 = num12;
 						if (b != 24)
 						{
 							goto Block_39;
 						}
 					}
 				}
-				num7 = num47;
-				int num48 = global::Main.printf(global::Main.___C__02KEGNLNML__0_5__AA_, __arglist());
+				num7 = num41;
+				int num42 = global::Main.printf(global::Main.___C__02KEGNLNML__0_5__AA_, __arglist());
 				num4 = num5 + 1;
 				bool flag7 = num5 == num;
 				b = 25;
@@ -682,7 +682,7 @@ public class Main
 	{
 		IntPtr* ptr = stackalloc IntPtr[8];
 		global::Main.llvm_lifetime_start_p0(4L, ptr);
-		IntPtr intPtr = (IntPtr)__arglist;
+		IntPtr intPtr = __arglist;
 		IntPtr intPtr2 = intPtr;
 		IntPtr intPtr3 = global::Main.__acrt_iob_func(1);
 		IntPtr intPtr4 = global::Main.__local_stdio_printf_options();
@@ -718,7 +718,7 @@ public class Main
 
 	public unsafe static void ??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(IntPtr %0, int %1)
 	{
-		Array_i8_21* ptr = stackalloc Array_i8_21[21];
+		Array_i8_21* ptr = stackalloc Array_i8_21[sizeof(Array_i8_21) * 1];
 		global::Main.llvm_lifetime_start_p0(21L, ptr);
 		bool flag = %1 < 0;
 		byte b = 0;
@@ -752,14 +752,14 @@ public class Main
 				byte b2 = (byte)((sbyte)num7);
 				byte b3 = b2 | 48;
 				num2 = num3 + -1;
-				IntPtr intPtr = ptr + num2 * 1 / sizeof(Array_i8_21);
-				*intPtr = b3;
+				byte* ptr2 = (byte*)(ptr + num2 * 1 / sizeof(Array_i8_21));
+				*ptr2 = b3;
 				num5 = (int)((IntPtr)((UIntPtr)num6 / (UIntPtr)10));
 				bool flag2 = (UIntPtr)num6 < (UIntPtr)10;
 				b = 4;
 				if (flag2)
 				{
-					goto IL_15E;
+					goto IL_164;
 				}
 			}
 			throw new Exception("Bad Jump!");
@@ -797,25 +797,25 @@ public class Main
 			byte b4 = (byte)((sbyte)num15);
 			byte b5 = b4 | 48;
 			num10 = num11 + -1;
-			IntPtr intPtr2 = ptr + num10 * 1 / sizeof(Array_i8_21);
-			*intPtr2 = b5;
+			byte* ptr3 = (byte*)(ptr + num10 * 1 / sizeof(Array_i8_21));
+			*ptr3 = b5;
 			num13 = (int)((IntPtr)((UIntPtr)num14 / (UIntPtr)10));
 			bool flag3 = (UIntPtr)num14 < (UIntPtr)10;
 			b = 2;
 			if (flag3)
 			{
-				goto IL_B8;
+				goto IL_BE;
 			}
 		}
 		throw new Exception("Bad Jump!");
 		Block_5:
 		throw new Exception("Bad Jump!");
-		IL_B8:
+		IL_BE:
 		int num16 = num11 + -2;
-		IntPtr intPtr3 = ptr + num16 * 1 / sizeof(Array_i8_21);
-		*intPtr3 = 45;
+		byte* ptr4 = (byte*)(ptr + num16 * 1 / sizeof(Array_i8_21));
+		*ptr4 = 45;
 		b = 3;
-		IL_15E:
+		IL_164:
 		int num17 = num16;
 		if (b != 3)
 		{
@@ -826,7 +826,7 @@ public class Main
 			}
 		}
 		int num18 = num17;
-		IntPtr intPtr4 = ptr + num18 * 1 / sizeof(Array_i8_21);
+		IntPtr intPtr = ptr + num18 * 1 / sizeof(Array_i8_21);
 		global::Main.llvm_memset_p0_i64(%0, 0, 24L, false);
 		if (num18 != 21)
 		{
@@ -838,60 +838,58 @@ public class Main
 			}
 			if ((UIntPtr)num19 >= (UIntPtr)16)
 			{
-				IntPtr intPtr5 = %0 + 0 * 28 + 2 * 28;
+				int* ptr5 = (ref %0.element_0) + 2 * 20;
 				int num20 = num19 | 15;
 				int num21 = global::Main.llvm_umax_i32(num20, 22);
-				IntPtr intPtr6;
-				IntPtr intPtr8;
+				IntPtr intPtr2;
+				IntPtr intPtr4;
 				if ((UIntPtr)num21 <= (UIntPtr)4094)
 				{
 					int num22 = num21 + 1;
-					intPtr6 = global::Main.NEW(num22);
+					intPtr2 = global::Main.NEW(num22);
 					b = 13;
 				}
 				else
 				{
 					int num23 = num21 + 36;
-					IntPtr intPtr7 = global::Main.NEW(num23);
-					int num24 = (int)intPtr7;
+					IntPtr intPtr3 = global::Main.NEW(num23);
+					int num24 = (int)intPtr3;
 					int num25 = num24 + 35;
 					int num26 = num25 | -32;
-					intPtr8 = (IntPtr)num26;
-					IntPtr intPtr9 = intPtr8 + -1 * 4;
-					*intPtr9 = num24;
+					intPtr4 = (IntPtr)num26;
+					int* ptr6 = intPtr4 + -1 * 4;
+					*ptr6 = num24;
 					b = 12;
 				}
-				IntPtr intPtr10 = intPtr8;
+				IntPtr intPtr5 = intPtr4;
 				if (b != 12)
 				{
-					intPtr10 = intPtr6;
+					intPtr5 = intPtr2;
 					if (b != 13)
 					{
 						throw new Exception("Bad Jump!");
 					}
 				}
-				IntPtr intPtr11 = intPtr10;
-				*%0 = intPtr11;
-				IntPtr intPtr12 = %0 + 0 * 28 + 1 * 28;
-				*intPtr12 = num19;
-				*intPtr5 = num21;
-				global::Main.llvm_memcpy_p0_p0_i32(intPtr11, intPtr4, num19, false);
-				IntPtr intPtr13 = intPtr11 + (IntPtr)(num19 * 1);
-				*intPtr13 = 0;
+				IntPtr intPtr6 = intPtr5;
+				*%0 = intPtr6;
+				%0.element_0.element_1 = num19;
+				*ptr5 = num21;
+				global::Main.llvm_memcpy_p0_p0_i32(intPtr6, intPtr, num19, false);
+				byte* ptr7 = intPtr6 + (IntPtr)(num19 * 1);
+				*ptr7 = 0;
 			}
 			else
 			{
-				IntPtr intPtr14 = %0 + 0 * 28 + 1 * 28;
-				*intPtr14 = num19;
-				IntPtr intPtr15 = %0 + 0 * 28 + 2 * 28;
-				*intPtr15 = 15;
-				global::Main.llvm_memcpy_p0_p0_i32(%0, intPtr4, num19, false);
+				%0.element_0.element_1 = num19;
+				int* ptr8 = (ref %0.element_0) + 2 * 20;
+				*ptr8 = 15;
+				global::Main.llvm_memcpy_p0_p0_i32(%0, intPtr, num19, false);
 			}
 		}
 		else
 		{
-			IntPtr intPtr16 = %0 + 0 * 28 + 2 * 28;
-			*intPtr16 = 15;
+			int* ptr9 = (ref %0.element_0) + 2 * 20;
+			*ptr9 = 15;
 		}
 		global::Main.llvm_lifetime_end_p0(21L, ptr);
 	}
@@ -912,7 +910,7 @@ public class Main
 	public unsafe static IntPtr ??_Gbad_array_new_length@std@@UAEPAXI@Z(IntPtr %0, int %1)
 	{
 		*%0 = global::Main.___7exception_std__6B_;
-		IntPtr intPtr = %0 + 0 * 17 + 1 * 17;
+		IntPtr intPtr = (ref %0.element_0) + 1 * 8;
 		global::Main.__std_exception_destroy(intPtr);
 		if (%1 != 0)
 		{
@@ -923,7 +921,7 @@ public class Main
 
 	public unsafe static IntPtr ?what@exception@std@@UBEPBDXZ(IntPtr %0)
 	{
-		IntPtr intPtr = %0 + 0 * 17 + 1 * 17;
+		IntPtr intPtr = (ref %0.element_0) + 1 * 8;
 		IntPtr intPtr2 = *intPtr;
 		bool flag = intPtr2 == 0;
 		IntPtr intPtr3 = global::Main.___C__0BC_EOODALEL_Unknown_5exception__AA_;
@@ -937,7 +935,7 @@ public class Main
 	public unsafe static IntPtr ??_Gbad_alloc@std@@UAEPAXI@Z(IntPtr %0, int %1)
 	{
 		*%0 = global::Main.___7exception_std__6B_;
-		IntPtr intPtr = %0 + 0 * 17 + 1 * 17;
+		IntPtr intPtr = (ref %0.element_0) + 1 * 8;
 		global::Main.__std_exception_destroy(intPtr);
 		if (%1 != 0)
 		{
@@ -949,7 +947,7 @@ public class Main
 	public unsafe static IntPtr ??_Gexception@std@@UAEPAXI@Z(IntPtr %0, int %1)
 	{
 		*%0 = global::Main.___7exception_std__6B_;
-		IntPtr intPtr = %0 + 0 * 17 + 1 * 17;
+		IntPtr intPtr = (ref %0.element_0) + 1 * 8;
 		global::Main.__std_exception_destroy(intPtr);
 		if (%1 != 0)
 		{
@@ -1227,38 +1225,31 @@ public class Main
 	public unsafe static int Main(string[] A_0)
 	{
 		global::Main.CreateVars();
-		bool flag = A_0.Length == 0;
-		int num;
-		if (flag)
+		if (A_0.Length == 0)
 		{
-			num = global::Main.main(0, (IntPtr)0);
+			return global::Main.main(0, (IntPtr)0);
 		}
-		else
+		byte** ptr;
+		checked
 		{
-			byte** ptr;
-			checked
-			{
-				ptr = stackalloc byte*[unchecked((UIntPtr)A_0.Length) * (UIntPtr)sizeof(byte*)];
-			}
-			for (int i = 0; i < A_0.Length; i++)
-			{
-				byte[] bytes = Encoding.ASCII.GetBytes(A_0[i]);
-				byte[] array;
-				byte* ptr2;
-				if ((array = bytes) == null || array.Length == 0)
-				{
-					ptr2 = null;
-				}
-				else
-				{
-					ptr2 = &array[0];
-				}
-				*(IntPtr*)(ptr + (IntPtr)i * (IntPtr)sizeof(byte*) / (IntPtr)sizeof(byte*)) = ptr2;
-				array = null;
-			}
-			num = global::Main.main(A_0.Length, ptr);
+			ptr = stackalloc byte*[unchecked((UIntPtr)A_0.Length) * (UIntPtr)sizeof(byte*)];
 		}
-		return num;
+		for (int i = 0; i < A_0.Length; i++)
+		{
+			byte[] array;
+			byte* ptr2;
+			if ((array = Encoding.ASCII.GetBytes(A_0[i])) == null || array.Length == 0)
+			{
+				ptr2 = null;
+			}
+			else
+			{
+				ptr2 = &array[0];
+			}
+			*(IntPtr*)(ptr + (IntPtr)i * (IntPtr)sizeof(byte*) / (IntPtr)sizeof(byte*)) = ptr2;
+			array = null;
+		}
+		return global::Main.main(A_0.Length, ptr);
 	}
 
 	public unsafe static Array_i8_19* ___C__0BD_NPMPEDPJ_Fibonacci_5Series_3_5__AA_;

@@ -346,774 +346,759 @@
 		)
 
 		IL_0000: nop
-		IL_0001: ldc.i4.8
-		IL_0002: localloc
-		IL_0004: stloc.1
-		IL_0005: ldc.i4.8
-		IL_0006: localloc
-		IL_0008: stloc.2
-		IL_0009: ldc.i4.8
-		IL_000A: localloc
-		IL_000C: stloc.3
-		IL_000D: ldarg.1
-		IL_000E: ldind.i
-		IL_000F: stloc.s   V_4
-		IL_0011: ldloc.s   V_4
-		IL_0013: call      int32 Main::atoi(native int)
-		IL_0018: stloc.s   V_5
-		IL_001A: ldsfld    valuetype Array_i8_19* Main::___C__0BD_NPMPEDPJ_Fibonacci_5Series_3_5__AA_
-		IL_001F: call      vararg int32 Main::printf(native int)
-		IL_0024: stloc.s   V_6
-		IL_0026: ldloc.s   V_5
-		IL_0028: ldc.i4.1
-		IL_0029: clt
-		IL_002B: stloc.s   V_7
-		IL_002D: ldc.i4.0
-		IL_002E: stloc.0
-		IL_002F: ldloc.s   V_7
-		IL_0031: brtrue.s  IL_0063
+		IL_0001: sizeof    Struct_class_std__basic_string
+		IL_0007: ldc.i4.1
+		IL_0008: mul
+		IL_0009: localloc
+		IL_000B: stloc.1
+		IL_000C: sizeof    Struct_class_std__basic_string
+		IL_0012: ldc.i4.1
+		IL_0013: mul
+		IL_0014: localloc
+		IL_0016: stloc.2
+		IL_0017: sizeof    Struct_class_std__basic_string
+		IL_001D: ldc.i4.1
+		IL_001E: mul
+		IL_001F: localloc
+		IL_0021: stloc.3
+		IL_0022: ldarg.1
+		IL_0023: ldind.i
+		IL_0024: stloc.s   V_4
+		IL_0026: ldloc.s   V_4
+		IL_0028: call      int32 Main::atoi(native int)
+		IL_002D: stloc.s   V_5
+		IL_002F: ldsfld    valuetype Array_i8_19* Main::___C__0BD_NPMPEDPJ_Fibonacci_5Series_3_5__AA_
+		IL_0034: call      vararg int32 Main::printf(native int)
+		IL_0039: stloc.s   V_6
+		IL_003B: ldloc.s   V_5
+		IL_003D: ldc.i4.1
+		IL_003E: clt
+		IL_0040: stloc.s   V_7
+		IL_0042: ldc.i4.0
+		IL_0043: stloc.0
+		IL_0044: ldloc.s   V_7
+		IL_0046: brtrue.s  IL_0069
 
-		IL_0033: nop
-		IL_0034: br.s      IL_0036
+		IL_0048: nop
+		IL_0049: br.s      IL_004B
 
-		IL_0036: nop
-		IL_0037: ldloc.2
-		IL_0038: ldc.i4.0
-		IL_0039: ldc.i4.s  28
-		IL_003B: mul
-		IL_003C: add
-		IL_003D: ldc.i4.2
-		IL_003E: ldc.i4.s  28
-		IL_0040: mul
-		IL_0041: add
-		IL_0042: stloc.s   V_8
-		IL_0044: ldloc.1
-		IL_0045: ldc.i4.0
-		IL_0046: ldc.i4.s  28
-		IL_0048: mul
-		IL_0049: add
-		IL_004A: ldc.i4.2
-		IL_004B: ldc.i4.s  28
-		IL_004D: mul
-		IL_004E: add
-		IL_004F: stloc.s   V_9
-		IL_0051: ldloc.3
-		IL_0052: ldc.i4.0
-		IL_0053: ldc.i4.s  28
-		IL_0055: mul
-		IL_0056: add
-		IL_0057: ldc.i4.2
-		IL_0058: ldc.i4.s  28
-		IL_005A: mul
-		IL_005B: add
-		IL_005C: stloc.s   V_10
-		IL_005E: ldc.i4.1
-		IL_005F: stloc.0
-		IL_0060: nop
-		IL_0061: br.s      IL_0067
+		IL_004B: nop
+		IL_004C: ldloc.2
+		IL_004D: ldflda    int32 Struct_class_std___String_val::element_2
+		IL_0052: stloc.s   V_8
+		IL_0054: ldloc.1
+		IL_0055: ldflda    int32 Struct_class_std___String_val::element_2
+		IL_005A: stloc.s   V_9
+		IL_005C: ldloc.3
+		IL_005D: ldflda    int32 Struct_class_std___String_val::element_2
+		IL_0062: stloc.s   V_10
+		IL_0064: ldc.i4.1
+		IL_0065: stloc.0
+		IL_0066: nop
+		IL_0067: br.s      IL_006D
 
-		IL_0063: nop
-		IL_0064: ldc.i4.0
-		IL_0065: nop
-		IL_0066: ret
-		// loop start (head: IL_0067)
-			IL_0067: nop
-			IL_0068: ldc.i4.1
-			IL_0069: ldloc.0
-			IL_006A: ldc.i4.1
-			IL_006B: ceq
-			IL_006D: brtrue.s  IL_0085
+		IL_0069: nop
+		IL_006A: ldc.i4.0
+		IL_006B: nop
+		IL_006C: ret
+		// loop start (head: IL_006D)
+			IL_006D: nop
+			IL_006E: ldc.i4.1
+			IL_006F: ldloc.0
+			IL_0070: ldc.i4.1
+			IL_0071: ceq
+			IL_0073: brtrue.s  IL_008B
 
-			IL_006F: pop
-			IL_0070: ldloc.s   V_11
-			IL_0072: ldloc.0
-			IL_0073: ldc.i4.s  25
-			IL_0075: ceq
-			IL_0077: brtrue.s  IL_0085
+			IL_0075: pop
+			IL_0076: ldloc.s   V_11
+			IL_0078: ldloc.0
+			IL_0079: ldc.i4.s  25
+			IL_007B: ceq
+			IL_007D: brtrue.s  IL_008B
 
-			IL_0079: pop
-			IL_007A: ldstr     "Bad Jump!"
-			IL_007F: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_0084: throw
+			IL_007F: pop
+			IL_0080: ldstr     "Bad Jump!"
+			IL_0085: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_008A: throw
 
-			IL_0085: nop
-			IL_0086: stloc.s   V_12
-			IL_0088: ldc.i4.1
-			IL_0089: ldloc.0
-			IL_008A: ldc.i4.1
-			IL_008B: ceq
-			IL_008D: brtrue.s  IL_00A5
+			IL_008B: nop
+			IL_008C: stloc.s   V_12
+			IL_008E: ldc.i4.1
+			IL_008F: ldloc.0
+			IL_0090: ldc.i4.1
+			IL_0091: ceq
+			IL_0093: brtrue.s  IL_00AB
 
-			IL_008F: pop
-			IL_0090: ldloc.s   V_13
-			IL_0092: ldloc.0
-			IL_0093: ldc.i4.s  25
-			IL_0095: ceq
-			IL_0097: brtrue.s  IL_00A5
+			IL_0095: pop
+			IL_0096: ldloc.s   V_13
+			IL_0098: ldloc.0
+			IL_0099: ldc.i4.s  25
+			IL_009B: ceq
+			IL_009D: brtrue.s  IL_00AB
 
-			IL_0099: pop
-			IL_009A: ldstr     "Bad Jump!"
-			IL_009F: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_00A4: throw
+			IL_009F: pop
+			IL_00A0: ldstr     "Bad Jump!"
+			IL_00A5: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_00AA: throw
 
-			IL_00A5: nop
-			IL_00A6: stloc.s   V_14
-			IL_00A8: ldc.i4.0
-			IL_00A9: ldloc.0
-			IL_00AA: ldc.i4.1
-			IL_00AB: ceq
-			IL_00AD: brtrue.s  IL_00C5
+			IL_00AB: nop
+			IL_00AC: stloc.s   V_14
+			IL_00AE: ldc.i4.0
+			IL_00AF: ldloc.0
+			IL_00B0: ldc.i4.1
+			IL_00B1: ceq
+			IL_00B3: brtrue.s  IL_00CB
 
-			IL_00AF: pop
-			IL_00B0: ldloc.s   V_15
-			IL_00B2: ldloc.0
-			IL_00B3: ldc.i4.s  25
-			IL_00B5: ceq
-			IL_00B7: brtrue.s  IL_00C5
+			IL_00B5: pop
+			IL_00B6: ldloc.s   V_15
+			IL_00B8: ldloc.0
+			IL_00B9: ldc.i4.s  25
+			IL_00BB: ceq
+			IL_00BD: brtrue.s  IL_00CB
 
-			IL_00B9: pop
-			IL_00BA: ldstr     "Bad Jump!"
-			IL_00BF: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_00C4: throw
+			IL_00BF: pop
+			IL_00C0: ldstr     "Bad Jump!"
+			IL_00C5: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_00CA: throw
 
-			IL_00C5: nop
-			IL_00C6: stloc.s   V_16
-			IL_00C8: ldloc.s   V_12
-			IL_00CA: ldc.i4.1
-			IL_00CB: ceq
-			IL_00CD: brtrue.s  IL_00DF
+			IL_00CB: nop
+			IL_00CC: stloc.s   V_16
+			IL_00CE: ldloc.s   V_12
+			IL_00D0: ldc.i4.1
+			IL_00D1: ceq
+			IL_00D3: brtrue.s  IL_00E5
 
-			IL_00CF: ldloc.s   V_12
-			IL_00D1: ldc.i4.2
-			IL_00D2: ceq
-			IL_00D4: brtrue    IL_0219
-
-			IL_00D9: nop
-			IL_00DA: br        IL_035B
+			IL_00D5: ldloc.s   V_12
+			IL_00D7: ldc.i4.2
+			IL_00D8: ceq
+			IL_00DA: brtrue    IL_021F
 
 			IL_00DF: nop
-			IL_00E0: ldc.i8    24
-			IL_00E9: ldloc.1
-			IL_00EA: call      void Main::llvm_lifetime_start_p0(int64, native int)
+			IL_00E0: br        IL_0361
+
+			IL_00E5: nop
+			IL_00E6: ldc.i8    24
 			IL_00EF: ldloc.1
-			IL_00F0: ldloc.s   V_16
-			IL_00F2: call      void Main::??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(native int, int32)
-			IL_00F7: ldloc.s   V_9
-			IL_00F9: ldind.i
-			IL_00FA: stloc.s   V_17
-			IL_00FC: ldloc.s   V_17
-			IL_00FE: conv.u
-			IL_00FF: ldc.i4.s  15
-			IL_0101: conv.u
-			IL_0102: cgt
-			IL_0104: stloc.s   V_18
-			IL_0106: ldloc.1
-			IL_0107: ldind.i
-			IL_0108: stloc.s   V_19
-			IL_010A: ldloc.s   V_19
-			IL_010C: ldloc.s   V_18
-			IL_010E: brtrue.s  IL_0112
+			IL_00F0: call      void Main::llvm_lifetime_start_p0(int64, native int)
+			IL_00F5: ldloc.1
+			IL_00F6: ldloc.s   V_16
+			IL_00F8: call      void Main::??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(native int, int32)
+			IL_00FD: ldloc.s   V_9
+			IL_00FF: ldind.i
+			IL_0100: stloc.s   V_17
+			IL_0102: ldloc.s   V_17
+			IL_0104: conv.u
+			IL_0105: ldc.i4.s  15
+			IL_0107: conv.u
+			IL_0108: cgt
+			IL_010A: stloc.s   V_18
+			IL_010C: ldloc.1
+			IL_010D: ldind.i
+			IL_010E: stloc.s   V_19
+			IL_0110: ldloc.s   V_19
+			IL_0112: ldloc.s   V_18
+			IL_0114: brtrue.s  IL_0118
 
-			IL_0110: pop
-			IL_0111: ldloc.1
+			IL_0116: pop
+			IL_0117: ldloc.1
 
-			IL_0112: nop
-			IL_0113: stloc.s   V_20
-			IL_0115: ldloc.s   V_20
-			IL_0117: call      vararg int32 Main::printf(native int)
-			IL_011C: stloc.s   V_21
-			IL_011E: ldloc.s   V_9
-			IL_0120: ldind.i
-			IL_0121: stloc.s   V_22
-			IL_0123: ldloc.s   V_22
-			IL_0125: conv.u
-			IL_0126: ldc.i4.s  15
-			IL_0128: conv.u
-			IL_0129: cgt
-			IL_012B: stloc.s   V_23
-			IL_012D: ldc.i4.4
-			IL_012E: stloc.0
-			IL_012F: ldloc.s   V_23
-			IL_0131: brtrue.s  IL_0139
-
-			IL_0133: nop
-			IL_0134: br        IL_0200
+			IL_0118: nop
+			IL_0119: stloc.s   V_20
+			IL_011B: ldloc.s   V_20
+			IL_011D: call      vararg int32 Main::printf(native int)
+			IL_0122: stloc.s   V_21
+			IL_0124: ldloc.s   V_9
+			IL_0126: ldind.i
+			IL_0127: stloc.s   V_22
+			IL_0129: ldloc.s   V_22
+			IL_012B: conv.u
+			IL_012C: ldc.i4.s  15
+			IL_012E: conv.u
+			IL_012F: cgt
+			IL_0131: stloc.s   V_23
+			IL_0133: ldc.i4.4
+			IL_0134: stloc.0
+			IL_0135: ldloc.s   V_23
+			IL_0137: brtrue.s  IL_013F
 
 			IL_0139: nop
-			IL_013A: ldloc.1
-			IL_013B: ldind.i
-			IL_013C: stloc.s   V_24
-			IL_013E: ldloc.s   V_22
-			IL_0140: ldc.i4.1
-			IL_0141: add
-			IL_0142: stloc.s   V_25
-			IL_0144: ldloc.s   V_25
-			IL_0146: conv.u
-			IL_0147: ldc.i4    4095
+			IL_013A: br        IL_0206
+
+			IL_013F: nop
+			IL_0140: ldloc.1
+			IL_0141: ldind.i
+			IL_0142: stloc.s   V_24
+			IL_0144: ldloc.s   V_22
+			IL_0146: ldc.i4.1
+			IL_0147: add
+			IL_0148: stloc.s   V_25
+			IL_014A: ldloc.s   V_25
 			IL_014C: conv.u
-			IL_014D: cgt
-			IL_014F: stloc.s   V_26
-			IL_0151: ldc.i4.5
-			IL_0152: stloc.0
-			IL_0153: ldloc.s   V_26
-			IL_0155: brtrue.s  IL_015A
+			IL_014D: ldc.i4    4095
+			IL_0152: conv.u
+			IL_0153: cgt
+			IL_0155: stloc.s   V_26
+			IL_0157: ldc.i4.5
+			IL_0158: stloc.0
+			IL_0159: ldloc.s   V_26
+			IL_015B: brtrue.s  IL_0160
 
-			IL_0157: nop
-			IL_0158: br.s      IL_01B0
+			IL_015D: nop
+			IL_015E: br.s      IL_01B6
 
-			IL_015A: nop
-			IL_015B: ldloc.s   V_24
-			IL_015D: ldc.i4.m1
-			IL_015E: ldc.i4.4
-			IL_015F: mul
-			IL_0160: add
-			IL_0161: stloc.s   V_27
-			IL_0163: ldloc.s   V_27
-			IL_0165: ldind.i
-			IL_0166: stloc.s   V_28
-			IL_0168: ldloc.s   V_24
-			IL_016A: stloc.s   V_29
-			IL_016C: ldloc.s   V_29
-			IL_016E: ldc.i4.s  -4
-			IL_0170: add
-			IL_0171: stloc.s   V_30
-			IL_0173: ldloc.s   V_30
-			IL_0175: ldloc.s   V_28
-			IL_0177: sub
-			IL_0178: stloc.s   V_31
-			IL_017A: ldloc.s   V_31
-			IL_017C: conv.u
-			IL_017D: ldc.i4.s  32
-			IL_017F: conv.u
-			IL_0180: clt
-			IL_0182: stloc.s   V_32
-			IL_0184: ldc.i4.6
-			IL_0185: stloc.0
-			IL_0186: ldloc.s   V_32
-			IL_0188: brtrue.s  IL_019F
+			IL_0160: nop
+			IL_0161: ldloc.s   V_24
+			IL_0163: ldc.i4.m1
+			IL_0164: ldc.i4.4
+			IL_0165: mul
+			IL_0166: add
+			IL_0167: stloc.s   V_27
+			IL_0169: ldloc.s   V_27
+			IL_016B: ldind.i
+			IL_016C: stloc.s   V_28
+			IL_016E: ldloc.s   V_24
+			IL_0170: stloc.s   V_29
+			IL_0172: ldloc.s   V_29
+			IL_0174: ldc.i4.s  -4
+			IL_0176: add
+			IL_0177: stloc.s   V_30
+			IL_0179: ldloc.s   V_30
+			IL_017B: ldloc.s   V_28
+			IL_017D: sub
+			IL_017E: stloc.s   V_31
+			IL_0180: ldloc.s   V_31
+			IL_0182: conv.u
+			IL_0183: ldc.i4.s  32
+			IL_0185: conv.u
+			IL_0186: clt
+			IL_0188: stloc.s   V_32
+			IL_018A: ldc.i4.6
+			IL_018B: stloc.0
+			IL_018C: ldloc.s   V_32
+			IL_018E: brtrue.s  IL_01A5
 
-			IL_018A: nop
-			IL_018B: br.s      IL_018D
+			IL_0190: nop
+			IL_0191: br.s      IL_0193
 
-			IL_018D: nop
-			IL_018E: call      void Main::_invalid_parameter_noinfo_noreturn()
-			IL_0193: ldstr     "unreachable!!!"
-			IL_0198: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_019D: throw
+			IL_0193: nop
+			IL_0194: call      void Main::_invalid_parameter_noinfo_noreturn()
+			IL_0199: ldstr     "unreachable!!!"
+			IL_019E: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_01A3: throw
 
-			IL_019E: nop
+			IL_01A4: nop
 
-			IL_019F: nop
-			IL_01A0: ldloc.s   V_22
-			IL_01A2: ldc.i4.s  36
-			IL_01A4: add
-			IL_01A5: stloc.s   V_33
-			IL_01A7: ldloc.s   V_28
-			IL_01A9: stloc.s   V_34
-			IL_01AB: ldc.i4.8
-			IL_01AC: stloc.0
-			IL_01AD: nop
-			IL_01AE: br.s      IL_01B0
+			IL_01A5: nop
+			IL_01A6: ldloc.s   V_22
+			IL_01A8: ldc.i4.s  36
+			IL_01AA: add
+			IL_01AB: stloc.s   V_33
+			IL_01AD: ldloc.s   V_28
+			IL_01AF: stloc.s   V_34
+			IL_01B1: ldc.i4.8
+			IL_01B2: stloc.0
+			IL_01B3: nop
+			IL_01B4: br.s      IL_01B6
 
-			IL_01B0: nop
-			IL_01B1: ldloc.s   V_33
-			IL_01B3: ldloc.0
-			IL_01B4: ldc.i4.8
-			IL_01B5: ceq
-			IL_01B7: brtrue.s  IL_01CE
+			IL_01B6: nop
+			IL_01B7: ldloc.s   V_33
+			IL_01B9: ldloc.0
+			IL_01BA: ldc.i4.8
+			IL_01BB: ceq
+			IL_01BD: brtrue.s  IL_01D4
 
-			IL_01B9: pop
-			IL_01BA: ldloc.s   V_25
-			IL_01BC: ldloc.0
-			IL_01BD: ldc.i4.5
-			IL_01BE: ceq
-			IL_01C0: brtrue.s  IL_01CE
+			IL_01BF: pop
+			IL_01C0: ldloc.s   V_25
+			IL_01C2: ldloc.0
+			IL_01C3: ldc.i4.5
+			IL_01C4: ceq
+			IL_01C6: brtrue.s  IL_01D4
 
-			IL_01C2: pop
-			IL_01C3: ldstr     "Bad Jump!"
-			IL_01C8: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_01CD: throw
+			IL_01C8: pop
+			IL_01C9: ldstr     "Bad Jump!"
+			IL_01CE: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_01D3: throw
 
-			IL_01CE: nop
-			IL_01CF: stloc.s   V_35
-			IL_01D1: ldloc.s   V_34
-			IL_01D3: ldloc.0
-			IL_01D4: ldc.i4.8
-			IL_01D5: ceq
-			IL_01D7: brtrue.s  IL_01EE
+			IL_01D4: nop
+			IL_01D5: stloc.s   V_35
+			IL_01D7: ldloc.s   V_34
+			IL_01D9: ldloc.0
+			IL_01DA: ldc.i4.8
+			IL_01DB: ceq
+			IL_01DD: brtrue.s  IL_01F4
 
-			IL_01D9: pop
-			IL_01DA: ldloc.s   V_24
-			IL_01DC: ldloc.0
-			IL_01DD: ldc.i4.5
-			IL_01DE: ceq
-			IL_01E0: brtrue.s  IL_01EE
+			IL_01DF: pop
+			IL_01E0: ldloc.s   V_24
+			IL_01E2: ldloc.0
+			IL_01E3: ldc.i4.5
+			IL_01E4: ceq
+			IL_01E6: brtrue.s  IL_01F4
 
-			IL_01E2: pop
-			IL_01E3: ldstr     "Bad Jump!"
-			IL_01E8: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_01ED: throw
+			IL_01E8: pop
+			IL_01E9: ldstr     "Bad Jump!"
+			IL_01EE: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_01F3: throw
 
-			IL_01EE: nop
-			IL_01EF: stloc.s   V_36
-			IL_01F1: ldloc.s   V_36
-			IL_01F3: ldloc.s   V_35
-			IL_01F5: call      void Main::DELETE(native int, int32)
-			IL_01FA: ldc.i4.s  9
-			IL_01FC: stloc.0
-			IL_01FD: nop
-			IL_01FE: br.s      IL_0200
+			IL_01F4: nop
+			IL_01F5: stloc.s   V_36
+			IL_01F7: ldloc.s   V_36
+			IL_01F9: ldloc.s   V_35
+			IL_01FB: call      void Main::DELETE(native int, int32)
+			IL_0200: ldc.i4.s  9
+			IL_0202: stloc.0
+			IL_0203: nop
+			IL_0204: br.s      IL_0206
 
-			IL_0200: nop
-			IL_0201: ldc.i8    24
-			IL_020A: ldloc.1
-			IL_020B: call      void Main::llvm_lifetime_end_p0(int64, native int)
-			IL_0210: ldc.i4.s  10
-			IL_0212: stloc.0
-			IL_0213: nop
-			IL_0214: br        IL_04A1
-
+			IL_0206: nop
+			IL_0207: ldc.i8    24
+			IL_0210: ldloc.1
+			IL_0211: call      void Main::llvm_lifetime_end_p0(int64, native int)
+			IL_0216: ldc.i4.s  10
+			IL_0218: stloc.0
 			IL_0219: nop
-			IL_021A: ldc.i8    24
-			IL_0223: ldloc.2
-			IL_0224: call      void Main::llvm_lifetime_start_p0(int64, native int)
+			IL_021A: br        IL_04A7
+
+			IL_021F: nop
+			IL_0220: ldc.i8    24
 			IL_0229: ldloc.2
-			IL_022A: ldloc.s   V_14
-			IL_022C: call      void Main::??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(native int, int32)
-			IL_0231: ldloc.s   V_8
-			IL_0233: ldind.i
-			IL_0234: stloc.s   V_37
-			IL_0236: ldloc.s   V_37
-			IL_0238: conv.u
-			IL_0239: ldc.i4.s  15
-			IL_023B: conv.u
-			IL_023C: cgt
-			IL_023E: stloc.s   V_38
-			IL_0240: ldloc.2
-			IL_0241: ldind.i
-			IL_0242: stloc.s   V_39
-			IL_0244: ldloc.s   V_39
-			IL_0246: ldloc.s   V_38
-			IL_0248: brtrue.s  IL_024C
+			IL_022A: call      void Main::llvm_lifetime_start_p0(int64, native int)
+			IL_022F: ldloc.2
+			IL_0230: ldloc.s   V_14
+			IL_0232: call      void Main::??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(native int, int32)
+			IL_0237: ldloc.s   V_8
+			IL_0239: ldind.i
+			IL_023A: stloc.s   V_37
+			IL_023C: ldloc.s   V_37
+			IL_023E: conv.u
+			IL_023F: ldc.i4.s  15
+			IL_0241: conv.u
+			IL_0242: cgt
+			IL_0244: stloc.s   V_38
+			IL_0246: ldloc.2
+			IL_0247: ldind.i
+			IL_0248: stloc.s   V_39
+			IL_024A: ldloc.s   V_39
+			IL_024C: ldloc.s   V_38
+			IL_024E: brtrue.s  IL_0252
 
-			IL_024A: pop
-			IL_024B: ldloc.2
+			IL_0250: pop
+			IL_0251: ldloc.2
 
-			IL_024C: nop
-			IL_024D: stloc.s   V_40
-			IL_024F: ldloc.s   V_40
-			IL_0251: call      vararg int32 Main::printf(native int)
-			IL_0256: stloc.s   V_41
-			IL_0258: ldloc.s   V_8
-			IL_025A: ldind.i
-			IL_025B: stloc.s   V_42
-			IL_025D: ldloc.s   V_42
-			IL_025F: conv.u
-			IL_0260: ldc.i4.s  15
-			IL_0262: conv.u
-			IL_0263: cgt
-			IL_0265: stloc.s   V_43
-			IL_0267: ldc.i4.s  11
-			IL_0269: stloc.0
-			IL_026A: ldloc.s   V_43
-			IL_026C: brtrue.s  IL_0274
-
-			IL_026E: nop
-			IL_026F: br        IL_0342
+			IL_0252: nop
+			IL_0253: stloc.s   V_40
+			IL_0255: ldloc.s   V_40
+			IL_0257: call      vararg int32 Main::printf(native int)
+			IL_025C: stloc.s   V_41
+			IL_025E: ldloc.s   V_8
+			IL_0260: ldind.i
+			IL_0261: stloc.s   V_42
+			IL_0263: ldloc.s   V_42
+			IL_0265: conv.u
+			IL_0266: ldc.i4.s  15
+			IL_0268: conv.u
+			IL_0269: cgt
+			IL_026B: stloc.s   V_43
+			IL_026D: ldc.i4.s  11
+			IL_026F: stloc.0
+			IL_0270: ldloc.s   V_43
+			IL_0272: brtrue.s  IL_027A
 
 			IL_0274: nop
-			IL_0275: ldloc.2
-			IL_0276: ldind.i
-			IL_0277: stloc.s   V_44
-			IL_0279: ldloc.s   V_42
-			IL_027B: ldc.i4.1
-			IL_027C: add
-			IL_027D: stloc.s   V_45
-			IL_027F: ldloc.s   V_45
-			IL_0281: conv.u
-			IL_0282: ldc.i4    4095
+			IL_0275: br        IL_0348
+
+			IL_027A: nop
+			IL_027B: ldloc.2
+			IL_027C: ldind.i
+			IL_027D: stloc.s   V_44
+			IL_027F: ldloc.s   V_42
+			IL_0281: ldc.i4.1
+			IL_0282: add
+			IL_0283: stloc.s   V_45
+			IL_0285: ldloc.s   V_45
 			IL_0287: conv.u
-			IL_0288: cgt
-			IL_028A: stloc.s   V_46
-			IL_028C: ldc.i4.s  12
-			IL_028E: stloc.0
-			IL_028F: ldloc.s   V_46
-			IL_0291: brtrue.s  IL_0296
+			IL_0288: ldc.i4    4095
+			IL_028D: conv.u
+			IL_028E: cgt
+			IL_0290: stloc.s   V_46
+			IL_0292: ldc.i4.s  12
+			IL_0294: stloc.0
+			IL_0295: ldloc.s   V_46
+			IL_0297: brtrue.s  IL_029C
 
-			IL_0293: nop
-			IL_0294: br.s      IL_02EE
+			IL_0299: nop
+			IL_029A: br.s      IL_02F4
 
-			IL_0296: nop
-			IL_0297: ldloc.s   V_44
-			IL_0299: ldc.i4.m1
-			IL_029A: ldc.i4.4
-			IL_029B: mul
-			IL_029C: add
-			IL_029D: stloc.s   V_47
-			IL_029F: ldloc.s   V_47
-			IL_02A1: ldind.i
-			IL_02A2: stloc.s   V_48
-			IL_02A4: ldloc.s   V_44
-			IL_02A6: stloc.s   V_49
-			IL_02A8: ldloc.s   V_49
-			IL_02AA: ldc.i4.s  -4
-			IL_02AC: add
-			IL_02AD: stloc.s   V_50
-			IL_02AF: ldloc.s   V_50
-			IL_02B1: ldloc.s   V_48
-			IL_02B3: sub
-			IL_02B4: stloc.s   V_51
-			IL_02B6: ldloc.s   V_51
-			IL_02B8: conv.u
-			IL_02B9: ldc.i4.s  32
-			IL_02BB: conv.u
-			IL_02BC: clt
-			IL_02BE: stloc.s   V_52
-			IL_02C0: ldc.i4.s  13
-			IL_02C2: stloc.0
-			IL_02C3: ldloc.s   V_52
-			IL_02C5: brtrue.s  IL_02DC
+			IL_029C: nop
+			IL_029D: ldloc.s   V_44
+			IL_029F: ldc.i4.m1
+			IL_02A0: ldc.i4.4
+			IL_02A1: mul
+			IL_02A2: add
+			IL_02A3: stloc.s   V_47
+			IL_02A5: ldloc.s   V_47
+			IL_02A7: ldind.i
+			IL_02A8: stloc.s   V_48
+			IL_02AA: ldloc.s   V_44
+			IL_02AC: stloc.s   V_49
+			IL_02AE: ldloc.s   V_49
+			IL_02B0: ldc.i4.s  -4
+			IL_02B2: add
+			IL_02B3: stloc.s   V_50
+			IL_02B5: ldloc.s   V_50
+			IL_02B7: ldloc.s   V_48
+			IL_02B9: sub
+			IL_02BA: stloc.s   V_51
+			IL_02BC: ldloc.s   V_51
+			IL_02BE: conv.u
+			IL_02BF: ldc.i4.s  32
+			IL_02C1: conv.u
+			IL_02C2: clt
+			IL_02C4: stloc.s   V_52
+			IL_02C6: ldc.i4.s  13
+			IL_02C8: stloc.0
+			IL_02C9: ldloc.s   V_52
+			IL_02CB: brtrue.s  IL_02E2
 
-			IL_02C7: nop
-			IL_02C8: br.s      IL_02CA
+			IL_02CD: nop
+			IL_02CE: br.s      IL_02D0
 
-			IL_02CA: nop
-			IL_02CB: call      void Main::_invalid_parameter_noinfo_noreturn()
-			IL_02D0: ldstr     "unreachable!!!"
-			IL_02D5: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_02DA: throw
+			IL_02D0: nop
+			IL_02D1: call      void Main::_invalid_parameter_noinfo_noreturn()
+			IL_02D6: ldstr     "unreachable!!!"
+			IL_02DB: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_02E0: throw
 
-			IL_02DB: nop
+			IL_02E1: nop
 
-			IL_02DC: nop
-			IL_02DD: ldloc.s   V_42
-			IL_02DF: ldc.i4.s  36
-			IL_02E1: add
-			IL_02E2: stloc.s   V_53
-			IL_02E4: ldloc.s   V_48
-			IL_02E6: stloc.s   V_54
-			IL_02E8: ldc.i4.s  15
-			IL_02EA: stloc.0
-			IL_02EB: nop
-			IL_02EC: br.s      IL_02EE
+			IL_02E2: nop
+			IL_02E3: ldloc.s   V_42
+			IL_02E5: ldc.i4.s  36
+			IL_02E7: add
+			IL_02E8: stloc.s   V_53
+			IL_02EA: ldloc.s   V_48
+			IL_02EC: stloc.s   V_54
+			IL_02EE: ldc.i4.s  15
+			IL_02F0: stloc.0
+			IL_02F1: nop
+			IL_02F2: br.s      IL_02F4
 
-			IL_02EE: nop
-			IL_02EF: ldloc.s   V_53
-			IL_02F1: ldloc.0
-			IL_02F2: ldc.i4.s  15
-			IL_02F4: ceq
-			IL_02F6: brtrue.s  IL_030E
+			IL_02F4: nop
+			IL_02F5: ldloc.s   V_53
+			IL_02F7: ldloc.0
+			IL_02F8: ldc.i4.s  15
+			IL_02FA: ceq
+			IL_02FC: brtrue.s  IL_0314
 
-			IL_02F8: pop
-			IL_02F9: ldloc.s   V_45
-			IL_02FB: ldloc.0
-			IL_02FC: ldc.i4.s  12
-			IL_02FE: ceq
-			IL_0300: brtrue.s  IL_030E
+			IL_02FE: pop
+			IL_02FF: ldloc.s   V_45
+			IL_0301: ldloc.0
+			IL_0302: ldc.i4.s  12
+			IL_0304: ceq
+			IL_0306: brtrue.s  IL_0314
 
-			IL_0302: pop
-			IL_0303: ldstr     "Bad Jump!"
-			IL_0308: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_030D: throw
+			IL_0308: pop
+			IL_0309: ldstr     "Bad Jump!"
+			IL_030E: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_0313: throw
 
-			IL_030E: nop
-			IL_030F: stloc.s   V_55
-			IL_0311: ldloc.s   V_54
-			IL_0313: ldloc.0
-			IL_0314: ldc.i4.s  15
-			IL_0316: ceq
-			IL_0318: brtrue.s  IL_0330
+			IL_0314: nop
+			IL_0315: stloc.s   V_55
+			IL_0317: ldloc.s   V_54
+			IL_0319: ldloc.0
+			IL_031A: ldc.i4.s  15
+			IL_031C: ceq
+			IL_031E: brtrue.s  IL_0336
 
-			IL_031A: pop
-			IL_031B: ldloc.s   V_44
-			IL_031D: ldloc.0
-			IL_031E: ldc.i4.s  12
-			IL_0320: ceq
-			IL_0322: brtrue.s  IL_0330
+			IL_0320: pop
+			IL_0321: ldloc.s   V_44
+			IL_0323: ldloc.0
+			IL_0324: ldc.i4.s  12
+			IL_0326: ceq
+			IL_0328: brtrue.s  IL_0336
 
-			IL_0324: pop
-			IL_0325: ldstr     "Bad Jump!"
-			IL_032A: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_032F: throw
+			IL_032A: pop
+			IL_032B: ldstr     "Bad Jump!"
+			IL_0330: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_0335: throw
 
-			IL_0330: nop
-			IL_0331: stloc.s   V_56
-			IL_0333: ldloc.s   V_56
-			IL_0335: ldloc.s   V_55
-			IL_0337: call      void Main::DELETE(native int, int32)
-			IL_033C: ldc.i4.s  16
-			IL_033E: stloc.0
-			IL_033F: nop
-			IL_0340: br.s      IL_0342
+			IL_0336: nop
+			IL_0337: stloc.s   V_56
+			IL_0339: ldloc.s   V_56
+			IL_033B: ldloc.s   V_55
+			IL_033D: call      void Main::DELETE(native int, int32)
+			IL_0342: ldc.i4.s  16
+			IL_0344: stloc.0
+			IL_0345: nop
+			IL_0346: br.s      IL_0348
 
-			IL_0342: nop
-			IL_0343: ldc.i8    24
-			IL_034C: ldloc.2
-			IL_034D: call      void Main::llvm_lifetime_end_p0(int64, native int)
-			IL_0352: ldc.i4.s  17
-			IL_0354: stloc.0
-			IL_0355: nop
-			IL_0356: br        IL_04A1
-
+			IL_0348: nop
+			IL_0349: ldc.i8    24
+			IL_0352: ldloc.2
+			IL_0353: call      void Main::llvm_lifetime_end_p0(int64, native int)
+			IL_0358: ldc.i4.s  17
+			IL_035A: stloc.0
 			IL_035B: nop
-			IL_035C: ldloc.s   V_14
-			IL_035E: ldloc.s   V_16
-			IL_0360: add
-			IL_0361: stloc.s   V_57
-			IL_0363: ldc.i8    24
-			IL_036C: ldloc.3
-			IL_036D: call      void Main::llvm_lifetime_start_p0(int64, native int)
+			IL_035C: br        IL_04A7
+
+			IL_0361: nop
+			IL_0362: ldloc.s   V_14
+			IL_0364: ldloc.s   V_16
+			IL_0366: add
+			IL_0367: stloc.s   V_57
+			IL_0369: ldc.i8    24
 			IL_0372: ldloc.3
-			IL_0373: ldloc.s   V_57
-			IL_0375: call      void Main::??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(native int, int32)
-			IL_037A: ldloc.s   V_10
-			IL_037C: ldind.i
-			IL_037D: stloc.s   V_58
-			IL_037F: ldloc.s   V_58
-			IL_0381: conv.u
-			IL_0382: ldc.i4.s  15
-			IL_0384: conv.u
-			IL_0385: cgt
-			IL_0387: stloc.s   V_59
-			IL_0389: ldloc.3
-			IL_038A: ldind.i
-			IL_038B: stloc.s   V_60
-			IL_038D: ldloc.s   V_60
-			IL_038F: ldloc.s   V_59
-			IL_0391: brtrue.s  IL_0395
+			IL_0373: call      void Main::llvm_lifetime_start_p0(int64, native int)
+			IL_0378: ldloc.3
+			IL_0379: ldloc.s   V_57
+			IL_037B: call      void Main::??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z(native int, int32)
+			IL_0380: ldloc.s   V_10
+			IL_0382: ldind.i
+			IL_0383: stloc.s   V_58
+			IL_0385: ldloc.s   V_58
+			IL_0387: conv.u
+			IL_0388: ldc.i4.s  15
+			IL_038A: conv.u
+			IL_038B: cgt
+			IL_038D: stloc.s   V_59
+			IL_038F: ldloc.3
+			IL_0390: ldind.i
+			IL_0391: stloc.s   V_60
+			IL_0393: ldloc.s   V_60
+			IL_0395: ldloc.s   V_59
+			IL_0397: brtrue.s  IL_039B
 
-			IL_0393: pop
-			IL_0394: ldloc.3
+			IL_0399: pop
+			IL_039A: ldloc.3
 
-			IL_0395: nop
-			IL_0396: stloc.s   V_61
-			IL_0398: ldloc.s   V_61
-			IL_039A: call      vararg int32 Main::printf(native int)
-			IL_039F: stloc.s   V_62
-			IL_03A1: ldloc.s   V_10
-			IL_03A3: ldind.i
-			IL_03A4: stloc.s   V_63
-			IL_03A6: ldloc.s   V_63
-			IL_03A8: conv.u
-			IL_03A9: ldc.i4.s  15
-			IL_03AB: conv.u
-			IL_03AC: cgt
-			IL_03AE: stloc.s   V_64
-			IL_03B0: ldc.i4.s  18
-			IL_03B2: stloc.0
-			IL_03B3: ldloc.s   V_64
-			IL_03B5: brtrue.s  IL_03BD
-
-			IL_03B7: nop
-			IL_03B8: br        IL_048B
+			IL_039B: nop
+			IL_039C: stloc.s   V_61
+			IL_039E: ldloc.s   V_61
+			IL_03A0: call      vararg int32 Main::printf(native int)
+			IL_03A5: stloc.s   V_62
+			IL_03A7: ldloc.s   V_10
+			IL_03A9: ldind.i
+			IL_03AA: stloc.s   V_63
+			IL_03AC: ldloc.s   V_63
+			IL_03AE: conv.u
+			IL_03AF: ldc.i4.s  15
+			IL_03B1: conv.u
+			IL_03B2: cgt
+			IL_03B4: stloc.s   V_64
+			IL_03B6: ldc.i4.s  18
+			IL_03B8: stloc.0
+			IL_03B9: ldloc.s   V_64
+			IL_03BB: brtrue.s  IL_03C3
 
 			IL_03BD: nop
-			IL_03BE: ldloc.3
-			IL_03BF: ldind.i
-			IL_03C0: stloc.s   V_65
-			IL_03C2: ldloc.s   V_63
-			IL_03C4: ldc.i4.1
-			IL_03C5: add
-			IL_03C6: stloc.s   V_66
-			IL_03C8: ldloc.s   V_66
-			IL_03CA: conv.u
-			IL_03CB: ldc.i4    4095
+			IL_03BE: br        IL_0491
+
+			IL_03C3: nop
+			IL_03C4: ldloc.3
+			IL_03C5: ldind.i
+			IL_03C6: stloc.s   V_65
+			IL_03C8: ldloc.s   V_63
+			IL_03CA: ldc.i4.1
+			IL_03CB: add
+			IL_03CC: stloc.s   V_66
+			IL_03CE: ldloc.s   V_66
 			IL_03D0: conv.u
-			IL_03D1: cgt
-			IL_03D3: stloc.s   V_67
-			IL_03D5: ldc.i4.s  19
-			IL_03D7: stloc.0
-			IL_03D8: ldloc.s   V_67
-			IL_03DA: brtrue.s  IL_03DF
+			IL_03D1: ldc.i4    4095
+			IL_03D6: conv.u
+			IL_03D7: cgt
+			IL_03D9: stloc.s   V_67
+			IL_03DB: ldc.i4.s  19
+			IL_03DD: stloc.0
+			IL_03DE: ldloc.s   V_67
+			IL_03E0: brtrue.s  IL_03E5
 
-			IL_03DC: nop
-			IL_03DD: br.s      IL_0437
+			IL_03E2: nop
+			IL_03E3: br.s      IL_043D
 
-			IL_03DF: nop
-			IL_03E0: ldloc.s   V_65
-			IL_03E2: ldc.i4.m1
-			IL_03E3: ldc.i4.4
-			IL_03E4: mul
-			IL_03E5: add
-			IL_03E6: stloc.s   V_68
-			IL_03E8: ldloc.s   V_68
-			IL_03EA: ldind.i
-			IL_03EB: stloc.s   V_69
-			IL_03ED: ldloc.s   V_65
-			IL_03EF: stloc.s   V_70
-			IL_03F1: ldloc.s   V_70
-			IL_03F3: ldc.i4.s  -4
-			IL_03F5: add
-			IL_03F6: stloc.s   V_71
-			IL_03F8: ldloc.s   V_71
-			IL_03FA: ldloc.s   V_69
-			IL_03FC: sub
-			IL_03FD: stloc.s   V_72
-			IL_03FF: ldloc.s   V_72
-			IL_0401: conv.u
-			IL_0402: ldc.i4.s  32
-			IL_0404: conv.u
-			IL_0405: clt
-			IL_0407: stloc.s   V_73
-			IL_0409: ldc.i4.s  20
-			IL_040B: stloc.0
-			IL_040C: ldloc.s   V_73
-			IL_040E: brtrue.s  IL_0425
+			IL_03E5: nop
+			IL_03E6: ldloc.s   V_65
+			IL_03E8: ldc.i4.m1
+			IL_03E9: ldc.i4.4
+			IL_03EA: mul
+			IL_03EB: add
+			IL_03EC: stloc.s   V_68
+			IL_03EE: ldloc.s   V_68
+			IL_03F0: ldind.i
+			IL_03F1: stloc.s   V_69
+			IL_03F3: ldloc.s   V_65
+			IL_03F5: stloc.s   V_70
+			IL_03F7: ldloc.s   V_70
+			IL_03F9: ldc.i4.s  -4
+			IL_03FB: add
+			IL_03FC: stloc.s   V_71
+			IL_03FE: ldloc.s   V_71
+			IL_0400: ldloc.s   V_69
+			IL_0402: sub
+			IL_0403: stloc.s   V_72
+			IL_0405: ldloc.s   V_72
+			IL_0407: conv.u
+			IL_0408: ldc.i4.s  32
+			IL_040A: conv.u
+			IL_040B: clt
+			IL_040D: stloc.s   V_73
+			IL_040F: ldc.i4.s  20
+			IL_0411: stloc.0
+			IL_0412: ldloc.s   V_73
+			IL_0414: brtrue.s  IL_042B
 
-			IL_0410: nop
-			IL_0411: br.s      IL_0413
+			IL_0416: nop
+			IL_0417: br.s      IL_0419
 
-			IL_0413: nop
-			IL_0414: call      void Main::_invalid_parameter_noinfo_noreturn()
-			IL_0419: ldstr     "unreachable!!!"
-			IL_041E: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_0423: throw
+			IL_0419: nop
+			IL_041A: call      void Main::_invalid_parameter_noinfo_noreturn()
+			IL_041F: ldstr     "unreachable!!!"
+			IL_0424: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_0429: throw
 
-			IL_0424: nop
+			IL_042A: nop
 
-			IL_0425: nop
-			IL_0426: ldloc.s   V_63
-			IL_0428: ldc.i4.s  36
-			IL_042A: add
-			IL_042B: stloc.s   V_74
-			IL_042D: ldloc.s   V_69
-			IL_042F: stloc.s   V_75
-			IL_0431: ldc.i4.s  22
-			IL_0433: stloc.0
-			IL_0434: nop
-			IL_0435: br.s      IL_0437
+			IL_042B: nop
+			IL_042C: ldloc.s   V_63
+			IL_042E: ldc.i4.s  36
+			IL_0430: add
+			IL_0431: stloc.s   V_74
+			IL_0433: ldloc.s   V_69
+			IL_0435: stloc.s   V_75
+			IL_0437: ldc.i4.s  22
+			IL_0439: stloc.0
+			IL_043A: nop
+			IL_043B: br.s      IL_043D
 
-			IL_0437: nop
-			IL_0438: ldloc.s   V_74
-			IL_043A: ldloc.0
-			IL_043B: ldc.i4.s  22
-			IL_043D: ceq
-			IL_043F: brtrue.s  IL_0457
+			IL_043D: nop
+			IL_043E: ldloc.s   V_74
+			IL_0440: ldloc.0
+			IL_0441: ldc.i4.s  22
+			IL_0443: ceq
+			IL_0445: brtrue.s  IL_045D
 
-			IL_0441: pop
-			IL_0442: ldloc.s   V_66
-			IL_0444: ldloc.0
-			IL_0445: ldc.i4.s  19
-			IL_0447: ceq
-			IL_0449: brtrue.s  IL_0457
+			IL_0447: pop
+			IL_0448: ldloc.s   V_66
+			IL_044A: ldloc.0
+			IL_044B: ldc.i4.s  19
+			IL_044D: ceq
+			IL_044F: brtrue.s  IL_045D
 
-			IL_044B: pop
-			IL_044C: ldstr     "Bad Jump!"
-			IL_0451: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_0456: throw
+			IL_0451: pop
+			IL_0452: ldstr     "Bad Jump!"
+			IL_0457: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_045C: throw
 
-			IL_0457: nop
-			IL_0458: stloc.s   V_76
-			IL_045A: ldloc.s   V_75
-			IL_045C: ldloc.0
-			IL_045D: ldc.i4.s  22
-			IL_045F: ceq
-			IL_0461: brtrue.s  IL_0479
+			IL_045D: nop
+			IL_045E: stloc.s   V_76
+			IL_0460: ldloc.s   V_75
+			IL_0462: ldloc.0
+			IL_0463: ldc.i4.s  22
+			IL_0465: ceq
+			IL_0467: brtrue.s  IL_047F
 
-			IL_0463: pop
-			IL_0464: ldloc.s   V_65
-			IL_0466: ldloc.0
-			IL_0467: ldc.i4.s  19
-			IL_0469: ceq
-			IL_046B: brtrue.s  IL_0479
+			IL_0469: pop
+			IL_046A: ldloc.s   V_65
+			IL_046C: ldloc.0
+			IL_046D: ldc.i4.s  19
+			IL_046F: ceq
+			IL_0471: brtrue.s  IL_047F
 
-			IL_046D: pop
-			IL_046E: ldstr     "Bad Jump!"
-			IL_0473: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_0478: throw
+			IL_0473: pop
+			IL_0474: ldstr     "Bad Jump!"
+			IL_0479: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_047E: throw
 
-			IL_0479: nop
-			IL_047A: stloc.s   V_77
-			IL_047C: ldloc.s   V_77
-			IL_047E: ldloc.s   V_76
-			IL_0480: call      void Main::DELETE(native int, int32)
-			IL_0485: ldc.i4.s  23
-			IL_0487: stloc.0
-			IL_0488: nop
-			IL_0489: br.s      IL_048B
+			IL_047F: nop
+			IL_0480: stloc.s   V_77
+			IL_0482: ldloc.s   V_77
+			IL_0484: ldloc.s   V_76
+			IL_0486: call      void Main::DELETE(native int, int32)
+			IL_048B: ldc.i4.s  23
+			IL_048D: stloc.0
+			IL_048E: nop
+			IL_048F: br.s      IL_0491
 
-			IL_048B: nop
-			IL_048C: ldc.i8    24
-			IL_0495: ldloc.3
-			IL_0496: call      void Main::llvm_lifetime_end_p0(int64, native int)
-			IL_049B: ldc.i4.s  24
-			IL_049D: stloc.0
-			IL_049E: nop
-			IL_049F: br.s      IL_04A1
+			IL_0491: nop
+			IL_0492: ldc.i8    24
+			IL_049B: ldloc.3
+			IL_049C: call      void Main::llvm_lifetime_end_p0(int64, native int)
+			IL_04A1: ldc.i4.s  24
+			IL_04A3: stloc.0
+			IL_04A4: nop
+			IL_04A5: br.s      IL_04A7
 
-			IL_04A1: nop
-			IL_04A2: ldloc.s   V_16
-			IL_04A4: ldloc.0
-			IL_04A5: ldc.i4.s  10
-			IL_04A7: ceq
-			IL_04A9: brtrue.s  IL_04CB
+			IL_04A7: nop
+			IL_04A8: ldloc.s   V_16
+			IL_04AA: ldloc.0
+			IL_04AB: ldc.i4.s  10
+			IL_04AD: ceq
+			IL_04AF: brtrue.s  IL_04D1
 
-			IL_04AB: pop
-			IL_04AC: ldloc.s   V_16
-			IL_04AE: ldloc.0
-			IL_04AF: ldc.i4.s  17
-			IL_04B1: ceq
-			IL_04B3: brtrue.s  IL_04CB
+			IL_04B1: pop
+			IL_04B2: ldloc.s   V_16
+			IL_04B4: ldloc.0
+			IL_04B5: ldc.i4.s  17
+			IL_04B7: ceq
+			IL_04B9: brtrue.s  IL_04D1
 
-			IL_04B5: pop
-			IL_04B6: ldloc.s   V_14
-			IL_04B8: ldloc.0
-			IL_04B9: ldc.i4.s  24
-			IL_04BB: ceq
-			IL_04BD: brtrue.s  IL_04CB
+			IL_04BB: pop
+			IL_04BC: ldloc.s   V_14
+			IL_04BE: ldloc.0
+			IL_04BF: ldc.i4.s  24
+			IL_04C1: ceq
+			IL_04C3: brtrue.s  IL_04D1
 
-			IL_04BF: pop
-			IL_04C0: ldstr     "Bad Jump!"
-			IL_04C5: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_04CA: throw
+			IL_04C5: pop
+			IL_04C6: ldstr     "Bad Jump!"
+			IL_04CB: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_04D0: throw
 
-			IL_04CB: nop
-			IL_04CC: stloc.s   V_15
-			IL_04CE: ldloc.s   V_14
-			IL_04D0: ldloc.0
-			IL_04D1: ldc.i4.s  10
-			IL_04D3: ceq
-			IL_04D5: brtrue.s  IL_04F7
+			IL_04D1: nop
+			IL_04D2: stloc.s   V_15
+			IL_04D4: ldloc.s   V_14
+			IL_04D6: ldloc.0
+			IL_04D7: ldc.i4.s  10
+			IL_04D9: ceq
+			IL_04DB: brtrue.s  IL_04FD
 
-			IL_04D7: pop
-			IL_04D8: ldloc.s   V_14
-			IL_04DA: ldloc.0
-			IL_04DB: ldc.i4.s  17
-			IL_04DD: ceq
-			IL_04DF: brtrue.s  IL_04F7
+			IL_04DD: pop
+			IL_04DE: ldloc.s   V_14
+			IL_04E0: ldloc.0
+			IL_04E1: ldc.i4.s  17
+			IL_04E3: ceq
+			IL_04E5: brtrue.s  IL_04FD
 
-			IL_04E1: pop
-			IL_04E2: ldloc.s   V_57
-			IL_04E4: ldloc.0
-			IL_04E5: ldc.i4.s  24
-			IL_04E7: ceq
-			IL_04E9: brtrue.s  IL_04F7
+			IL_04E7: pop
+			IL_04E8: ldloc.s   V_57
+			IL_04EA: ldloc.0
+			IL_04EB: ldc.i4.s  24
+			IL_04ED: ceq
+			IL_04EF: brtrue.s  IL_04FD
 
-			IL_04EB: pop
-			IL_04EC: ldstr     "Bad Jump!"
-			IL_04F1: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_04F6: throw
+			IL_04F1: pop
+			IL_04F2: ldstr     "Bad Jump!"
+			IL_04F7: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_04FC: throw
 
-			IL_04F7: nop
-			IL_04F8: stloc.s   V_13
-			IL_04FA: ldsfld    valuetype Array_i8_3* Main::___C__02KEGNLNML__0_5__AA_
-			IL_04FF: call      vararg int32 Main::printf(native int)
-			IL_0504: stloc.s   V_78
-			IL_0506: ldloc.s   V_12
-			IL_0508: ldc.i4.1
-			IL_0509: add
-			IL_050A: stloc.s   V_11
+			IL_04FD: nop
+			IL_04FE: stloc.s   V_13
+			IL_0500: ldsfld    valuetype Array_i8_3* Main::___C__02KEGNLNML__0_5__AA_
+			IL_0505: call      vararg int32 Main::printf(native int)
+			IL_050A: stloc.s   V_78
 			IL_050C: ldloc.s   V_12
-			IL_050E: ldloc.s   V_5
-			IL_0510: ceq
-			IL_0512: stloc.s   V_79
-			IL_0514: ldc.i4.s  25
-			IL_0516: stloc.0
-			IL_0517: ldloc.s   V_79
-			IL_0519: brtrue    IL_0063
+			IL_050E: ldc.i4.1
+			IL_050F: add
+			IL_0510: stloc.s   V_11
+			IL_0512: ldloc.s   V_12
+			IL_0514: ldloc.s   V_5
+			IL_0516: ceq
+			IL_0518: stloc.s   V_79
+			IL_051A: ldc.i4.s  25
+			IL_051C: stloc.0
+			IL_051D: ldloc.s   V_79
+			IL_051F: brtrue    IL_0069
 
-			IL_051E: nop
-			IL_051F: br        IL_0067
+			IL_0524: nop
+			IL_0525: br        IL_006D
 		// end loop
 	} // end of method Main::main
 
@@ -1160,36 +1145,35 @@
 		IL_000E: ldloc.1
 		IL_000F: call      void Main::llvm_lifetime_start_p0(int64, native int)
 		IL_0014: arglist
-		IL_0016: conv.u
-		IL_0017: stloc.2
-		IL_0018: ldloca.s  V_2
-		IL_001A: stloc.1
-		IL_001B: ldloc.1
-		IL_001C: ldind.i
-		IL_001D: stloc.3
-		IL_001E: ldc.i4.1
-		IL_001F: call      native int Main::__acrt_iob_func(int32)
-		IL_0024: stloc.s   V_4
-		IL_0026: call      native int Main::__local_stdio_printf_options()
-		IL_002B: stloc.s   V_5
-		IL_002D: ldloc.s   V_5
-		IL_002F: ldind.i
-		IL_0030: stloc.s   V_6
-		IL_0032: ldloc.s   V_6
-		IL_0034: ldloc.s   V_4
-		IL_0036: ldarg.0
-		IL_0037: ldc.i8    0
-		IL_0040: ldloc.3
-		IL_0041: call      int32 Main::__stdio_common_vfprintf(int64, native int, native int, native int, native int)
-		IL_0046: stloc.s   V_7
-		IL_0048: ldloc.1
-		IL_0049: call      void Main::llvm_va_end(native int)
-		IL_004E: ldc.i8    4
-		IL_0057: ldloc.1
-		IL_0058: call      void Main::llvm_lifetime_end_p0(int64, native int)
-		IL_005D: ldloc.s   V_7
-		IL_005F: nop
-		IL_0060: ret
+		IL_0016: stloc.2
+		IL_0017: ldloca.s  V_2
+		IL_0019: stloc.1
+		IL_001A: ldloc.1
+		IL_001B: ldind.i
+		IL_001C: stloc.3
+		IL_001D: ldc.i4.1
+		IL_001E: call      native int Main::__acrt_iob_func(int32)
+		IL_0023: stloc.s   V_4
+		IL_0025: call      native int Main::__local_stdio_printf_options()
+		IL_002A: stloc.s   V_5
+		IL_002C: ldloc.s   V_5
+		IL_002E: ldind.i
+		IL_002F: stloc.s   V_6
+		IL_0031: ldloc.s   V_6
+		IL_0033: ldloc.s   V_4
+		IL_0035: ldarg.0
+		IL_0036: ldc.i8    0
+		IL_003F: ldloc.3
+		IL_0040: call      int32 Main::__stdio_common_vfprintf(int64, native int, native int, native int, native int)
+		IL_0045: stloc.s   V_7
+		IL_0047: ldloc.1
+		IL_0048: call      void Main::llvm_va_end(native int)
+		IL_004D: ldc.i8    4
+		IL_0056: ldloc.1
+		IL_0057: call      void Main::llvm_lifetime_end_p0(int64, native int)
+		IL_005C: ldloc.s   V_7
+		IL_005E: nop
+		IL_005F: ret
 	} // end of method Main::printf
 
 	.method public hidebysig static 
@@ -1274,10 +1258,10 @@
 			[8] int32,
 			[9] uint8,
 			[10] uint8,
-			[11] native int,
+			[11] uint8*,
 			[12] bool,
 			[13] int32,
-			[14] native int,
+			[14] uint8*,
 			[15] int32,
 			[16] int32,
 			[17] int32,
@@ -1285,18 +1269,18 @@
 			[19] int32,
 			[20] uint8,
 			[21] uint8,
-			[22] native int,
+			[22] uint8*,
 			[23] bool,
 			[24] int32,
 			[25] native int,
 			[26] bool,
-			[27] native int,
+			[27] int32*,
 			[28] int32,
 			[29] bool,
 			[30] bool,
-			[31] native int,
-			[32] native int,
-			[33] native int,
+			[31] valuetype Array_i8_12*,
+			[32] int32*,
+			[33] int32*,
 			[34] int32,
 			[35] int32,
 			[36] bool,
@@ -1306,527 +1290,508 @@
 			[40] int32,
 			[41] int32,
 			[42] native int,
-			[43] native int,
+			[43] int32*,
 			[44] int32,
 			[45] native int,
 			[46] native int,
-			[47] native int,
-			[48] native int
+			[47] valuetype Array_i8_12*,
+			[48] uint8*
 		)
 
 		IL_0000: nop
-		IL_0001: ldc.i4.s  21
-		IL_0003: localloc
-		IL_0005: stloc.1
-		IL_0006: ldc.i8    21
-		IL_000F: ldloc.1
-		IL_0010: call      void Main::llvm_lifetime_start_p0(int64, native int)
-		IL_0015: ldarg.1
-		IL_0016: ldc.i4.0
-		IL_0017: clt
-		IL_0019: stloc.2
-		IL_001A: ldc.i4.0
-		IL_001B: stloc.0
-		IL_001C: ldloc.2
-		IL_001D: brtrue.s  IL_0025
-
-		IL_001F: nop
-		IL_0020: br        IL_00D5
+		IL_0001: sizeof    Array_i8_21
+		IL_0007: ldc.i4.1
+		IL_0008: mul
+		IL_0009: localloc
+		IL_000B: stloc.1
+		IL_000C: ldc.i8    21
+		IL_0015: ldloc.1
+		IL_0016: call      void Main::llvm_lifetime_start_p0(int64, native int)
+		IL_001B: ldarg.1
+		IL_001C: ldc.i4.0
+		IL_001D: clt
+		IL_001F: stloc.2
+		IL_0020: ldc.i4.0
+		IL_0021: stloc.0
+		IL_0022: ldloc.2
+		IL_0023: brtrue.s  IL_002B
 
 		IL_0025: nop
-		IL_0026: ldc.i4.0
-		IL_0027: ldarg.1
-		IL_0028: sub
-		IL_0029: stloc.3
-		IL_002A: ldc.i4.1
-		IL_002B: stloc.0
-		IL_002C: nop
-		IL_002D: br.s      IL_002F
-		// loop start (head: IL_002F)
-			IL_002F: nop
-			IL_0030: ldc.i4.s  21
-			IL_0032: ldloc.0
-			IL_0033: ldc.i4.1
-			IL_0034: ceq
-			IL_0036: brtrue.s  IL_004D
+		IL_0026: br        IL_00DB
 
-			IL_0038: pop
-			IL_0039: ldloc.s   V_4
-			IL_003B: ldloc.0
-			IL_003C: ldc.i4.2
-			IL_003D: ceq
-			IL_003F: brtrue.s  IL_004D
+		IL_002B: nop
+		IL_002C: ldc.i4.0
+		IL_002D: ldarg.1
+		IL_002E: sub
+		IL_002F: stloc.3
+		IL_0030: ldc.i4.1
+		IL_0031: stloc.0
+		IL_0032: nop
+		IL_0033: br.s      IL_0035
+		// loop start (head: IL_0035)
+			IL_0035: nop
+			IL_0036: ldc.i4.s  21
+			IL_0038: ldloc.0
+			IL_0039: ldc.i4.1
+			IL_003A: ceq
+			IL_003C: brtrue.s  IL_0053
 
-			IL_0041: pop
-			IL_0042: ldstr     "Bad Jump!"
-			IL_0047: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_004C: throw
+			IL_003E: pop
+			IL_003F: ldloc.s   V_4
+			IL_0041: ldloc.0
+			IL_0042: ldc.i4.2
+			IL_0043: ceq
+			IL_0045: brtrue.s  IL_0053
 
-			IL_004D: nop
-			IL_004E: stloc.s   V_5
-			IL_0050: ldloc.3
-			IL_0051: ldloc.0
-			IL_0052: ldc.i4.1
-			IL_0053: ceq
-			IL_0055: brtrue.s  IL_006C
+			IL_0047: pop
+			IL_0048: ldstr     "Bad Jump!"
+			IL_004D: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_0052: throw
 
-			IL_0057: pop
-			IL_0058: ldloc.s   V_6
-			IL_005A: ldloc.0
-			IL_005B: ldc.i4.2
-			IL_005C: ceq
-			IL_005E: brtrue.s  IL_006C
+			IL_0053: nop
+			IL_0054: stloc.s   V_5
+			IL_0056: ldloc.3
+			IL_0057: ldloc.0
+			IL_0058: ldc.i4.1
+			IL_0059: ceq
+			IL_005B: brtrue.s  IL_0072
 
-			IL_0060: pop
-			IL_0061: ldstr     "Bad Jump!"
-			IL_0066: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_006B: throw
+			IL_005D: pop
+			IL_005E: ldloc.s   V_6
+			IL_0060: ldloc.0
+			IL_0061: ldc.i4.2
+			IL_0062: ceq
+			IL_0064: brtrue.s  IL_0072
 
-			IL_006C: nop
-			IL_006D: stloc.s   V_7
-			IL_006F: ldloc.s   V_7
-			IL_0071: conv.u8
-			IL_0072: ldc.i4.s  10
-			IL_0074: conv.u8
-			IL_0075: rem
-			IL_0076: conv.i4
-			IL_0077: stloc.s   V_8
-			IL_0079: ldloc.s   V_8
-			IL_007B: conv.i1
-			IL_007C: stloc.s   V_9
-			IL_007E: ldloc.s   V_9
-			IL_0080: ldc.i4.s  48
-			IL_0082: or
-			IL_0083: stloc.s   V_10
-			IL_0085: ldloc.s   V_5
-			IL_0087: ldc.i4.m1
-			IL_0088: add
-			IL_0089: stloc.s   V_4
-			IL_008B: ldloc.1
-			IL_008C: ldloc.s   V_4
-			IL_008E: ldc.i4.1
-			IL_008F: mul
-			IL_0090: add
-			IL_0091: stloc.s   V_11
-			IL_0093: ldloc.s   V_11
-			IL_0095: ldloc.s   V_10
-			IL_0097: stind.i1
-			IL_0098: ldloc.s   V_7
-			IL_009A: conv.u
-			IL_009B: ldc.i4.s  10
-			IL_009D: conv.u
-			IL_009E: div
-			IL_009F: conv.i
-			IL_00A0: stloc.s   V_6
-			IL_00A2: ldloc.s   V_7
-			IL_00A4: conv.u
-			IL_00A5: ldc.i4.s  10
-			IL_00A7: conv.u
-			IL_00A8: clt
-			IL_00AA: stloc.s   V_12
-			IL_00AC: ldc.i4.2
-			IL_00AD: stloc.0
-			IL_00AE: ldloc.s   V_12
-			IL_00B0: brtrue.s  IL_00B8
+			IL_0066: pop
+			IL_0067: ldstr     "Bad Jump!"
+			IL_006C: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_0071: throw
 
-			IL_00B2: nop
-			IL_00B3: br        IL_002F
+			IL_0072: nop
+			IL_0073: stloc.s   V_7
+			IL_0075: ldloc.s   V_7
+			IL_0077: conv.u8
+			IL_0078: ldc.i4.s  10
+			IL_007A: conv.u8
+			IL_007B: rem
+			IL_007C: conv.i4
+			IL_007D: stloc.s   V_8
+			IL_007F: ldloc.s   V_8
+			IL_0081: conv.i1
+			IL_0082: stloc.s   V_9
+			IL_0084: ldloc.s   V_9
+			IL_0086: ldc.i4.s  48
+			IL_0088: or
+			IL_0089: stloc.s   V_10
+			IL_008B: ldloc.s   V_5
+			IL_008D: ldc.i4.m1
+			IL_008E: add
+			IL_008F: stloc.s   V_4
+			IL_0091: ldloc.1
+			IL_0092: ldloc.s   V_4
+			IL_0094: ldc.i4.1
+			IL_0095: mul
+			IL_0096: add
+			IL_0097: stloc.s   V_11
+			IL_0099: ldloc.s   V_11
+			IL_009B: ldloc.s   V_10
+			IL_009D: stind.i1
+			IL_009E: ldloc.s   V_7
+			IL_00A0: conv.u
+			IL_00A1: ldc.i4.s  10
+			IL_00A3: conv.u
+			IL_00A4: div
+			IL_00A5: conv.i
+			IL_00A6: stloc.s   V_6
+			IL_00A8: ldloc.s   V_7
+			IL_00AA: conv.u
+			IL_00AB: ldc.i4.s  10
+			IL_00AD: conv.u
+			IL_00AE: clt
+			IL_00B0: stloc.s   V_12
+			IL_00B2: ldc.i4.2
+			IL_00B3: stloc.0
+			IL_00B4: ldloc.s   V_12
+			IL_00B6: brtrue.s  IL_00BE
+
+			IL_00B8: nop
+			IL_00B9: br        IL_0035
 		// end loop
 
-		IL_00B8: nop
-		IL_00B9: ldloc.s   V_5
-		IL_00BB: ldc.i4.s  -2
-		IL_00BD: add
-		IL_00BE: stloc.s   V_13
-		IL_00C0: ldloc.1
-		IL_00C1: ldloc.s   V_13
-		IL_00C3: ldc.i4.1
-		IL_00C4: mul
-		IL_00C5: add
-		IL_00C6: stloc.s   V_14
-		IL_00C8: ldloc.s   V_14
-		IL_00CA: ldc.i4.s  45
-		IL_00CC: stind.i1
-		IL_00CD: ldc.i4.3
-		IL_00CE: stloc.0
-		IL_00CF: nop
-		IL_00D0: br        IL_015E
-		// loop start (head: IL_00D5)
-			IL_00D5: nop
-			IL_00D6: ldloc.s   V_15
-			IL_00D8: ldloc.0
-			IL_00D9: ldc.i4.4
-			IL_00DA: ceq
-			IL_00DC: brtrue.s  IL_00F3
+		IL_00BE: nop
+		IL_00BF: ldloc.s   V_5
+		IL_00C1: ldc.i4.s  -2
+		IL_00C3: add
+		IL_00C4: stloc.s   V_13
+		IL_00C6: ldloc.1
+		IL_00C7: ldloc.s   V_13
+		IL_00C9: ldc.i4.1
+		IL_00CA: mul
+		IL_00CB: add
+		IL_00CC: stloc.s   V_14
+		IL_00CE: ldloc.s   V_14
+		IL_00D0: ldc.i4.s  45
+		IL_00D2: stind.i1
+		IL_00D3: ldc.i4.3
+		IL_00D4: stloc.0
+		IL_00D5: nop
+		IL_00D6: br        IL_0164
+		// loop start (head: IL_00DB)
+			IL_00DB: nop
+			IL_00DC: ldloc.s   V_15
+			IL_00DE: ldloc.0
+			IL_00DF: ldc.i4.4
+			IL_00E0: ceq
+			IL_00E2: brtrue.s  IL_00F9
 
-			IL_00DE: pop
-			IL_00DF: ldc.i4.s  21
-			IL_00E1: ldloc.0
-			IL_00E2: ldc.i4.0
-			IL_00E3: ceq
-			IL_00E5: brtrue.s  IL_00F3
+			IL_00E4: pop
+			IL_00E5: ldc.i4.s  21
+			IL_00E7: ldloc.0
+			IL_00E8: ldc.i4.0
+			IL_00E9: ceq
+			IL_00EB: brtrue.s  IL_00F9
 
-			IL_00E7: pop
-			IL_00E8: ldstr     "Bad Jump!"
-			IL_00ED: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_00F2: throw
+			IL_00ED: pop
+			IL_00EE: ldstr     "Bad Jump!"
+			IL_00F3: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_00F8: throw
 
-			IL_00F3: nop
-			IL_00F4: stloc.s   V_16
-			IL_00F6: ldloc.s   V_17
-			IL_00F8: ldloc.0
-			IL_00F9: ldc.i4.4
-			IL_00FA: ceq
-			IL_00FC: brtrue.s  IL_0112
+			IL_00F9: nop
+			IL_00FA: stloc.s   V_16
+			IL_00FC: ldloc.s   V_17
+			IL_00FE: ldloc.0
+			IL_00FF: ldc.i4.4
+			IL_0100: ceq
+			IL_0102: brtrue.s  IL_0118
 
-			IL_00FE: pop
-			IL_00FF: ldarg.1
-			IL_0100: ldloc.0
-			IL_0101: ldc.i4.0
-			IL_0102: ceq
-			IL_0104: brtrue.s  IL_0112
+			IL_0104: pop
+			IL_0105: ldarg.1
+			IL_0106: ldloc.0
+			IL_0107: ldc.i4.0
+			IL_0108: ceq
+			IL_010A: brtrue.s  IL_0118
 
-			IL_0106: pop
-			IL_0107: ldstr     "Bad Jump!"
-			IL_010C: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-			IL_0111: throw
+			IL_010C: pop
+			IL_010D: ldstr     "Bad Jump!"
+			IL_0112: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+			IL_0117: throw
 
-			IL_0112: nop
-			IL_0113: stloc.s   V_18
-			IL_0115: ldloc.s   V_18
-			IL_0117: conv.u8
-			IL_0118: ldc.i4.s  10
-			IL_011A: conv.u8
-			IL_011B: rem
-			IL_011C: conv.i4
-			IL_011D: stloc.s   V_19
-			IL_011F: ldloc.s   V_19
-			IL_0121: conv.i1
-			IL_0122: stloc.s   V_20
-			IL_0124: ldloc.s   V_20
-			IL_0126: ldc.i4.s  48
-			IL_0128: or
-			IL_0129: stloc.s   V_21
-			IL_012B: ldloc.s   V_16
-			IL_012D: ldc.i4.m1
-			IL_012E: add
-			IL_012F: stloc.s   V_15
-			IL_0131: ldloc.1
-			IL_0132: ldloc.s   V_15
-			IL_0134: ldc.i4.1
-			IL_0135: mul
-			IL_0136: add
-			IL_0137: stloc.s   V_22
-			IL_0139: ldloc.s   V_22
-			IL_013B: ldloc.s   V_21
-			IL_013D: stind.i1
-			IL_013E: ldloc.s   V_18
-			IL_0140: conv.u
-			IL_0141: ldc.i4.s  10
-			IL_0143: conv.u
-			IL_0144: div
-			IL_0145: conv.i
-			IL_0146: stloc.s   V_17
-			IL_0148: ldloc.s   V_18
-			IL_014A: conv.u
-			IL_014B: ldc.i4.s  10
-			IL_014D: conv.u
-			IL_014E: clt
-			IL_0150: stloc.s   V_23
-			IL_0152: ldc.i4.4
-			IL_0153: stloc.0
-			IL_0154: ldloc.s   V_23
-			IL_0156: brtrue.s  IL_015E
+			IL_0118: nop
+			IL_0119: stloc.s   V_18
+			IL_011B: ldloc.s   V_18
+			IL_011D: conv.u8
+			IL_011E: ldc.i4.s  10
+			IL_0120: conv.u8
+			IL_0121: rem
+			IL_0122: conv.i4
+			IL_0123: stloc.s   V_19
+			IL_0125: ldloc.s   V_19
+			IL_0127: conv.i1
+			IL_0128: stloc.s   V_20
+			IL_012A: ldloc.s   V_20
+			IL_012C: ldc.i4.s  48
+			IL_012E: or
+			IL_012F: stloc.s   V_21
+			IL_0131: ldloc.s   V_16
+			IL_0133: ldc.i4.m1
+			IL_0134: add
+			IL_0135: stloc.s   V_15
+			IL_0137: ldloc.1
+			IL_0138: ldloc.s   V_15
+			IL_013A: ldc.i4.1
+			IL_013B: mul
+			IL_013C: add
+			IL_013D: stloc.s   V_22
+			IL_013F: ldloc.s   V_22
+			IL_0141: ldloc.s   V_21
+			IL_0143: stind.i1
+			IL_0144: ldloc.s   V_18
+			IL_0146: conv.u
+			IL_0147: ldc.i4.s  10
+			IL_0149: conv.u
+			IL_014A: div
+			IL_014B: conv.i
+			IL_014C: stloc.s   V_17
+			IL_014E: ldloc.s   V_18
+			IL_0150: conv.u
+			IL_0151: ldc.i4.s  10
+			IL_0153: conv.u
+			IL_0154: clt
+			IL_0156: stloc.s   V_23
+			IL_0158: ldc.i4.4
+			IL_0159: stloc.0
+			IL_015A: ldloc.s   V_23
+			IL_015C: brtrue.s  IL_0164
 
-			IL_0158: nop
-			IL_0159: br        IL_00D5
+			IL_015E: nop
+			IL_015F: br        IL_00DB
 		// end loop
 
-		IL_015E: nop
-		IL_015F: ldloc.s   V_13
-		IL_0161: ldloc.0
-		IL_0162: ldc.i4.3
-		IL_0163: ceq
-		IL_0165: brtrue.s  IL_017C
+		IL_0164: nop
+		IL_0165: ldloc.s   V_13
+		IL_0167: ldloc.0
+		IL_0168: ldc.i4.3
+		IL_0169: ceq
+		IL_016B: brtrue.s  IL_0182
 
-		IL_0167: pop
-		IL_0168: ldloc.s   V_15
-		IL_016A: ldloc.0
-		IL_016B: ldc.i4.4
-		IL_016C: ceq
-		IL_016E: brtrue.s  IL_017C
+		IL_016D: pop
+		IL_016E: ldloc.s   V_15
+		IL_0170: ldloc.0
+		IL_0171: ldc.i4.4
+		IL_0172: ceq
+		IL_0174: brtrue.s  IL_0182
 
-		IL_0170: pop
-		IL_0171: ldstr     "Bad Jump!"
-		IL_0176: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-		IL_017B: throw
+		IL_0176: pop
+		IL_0177: ldstr     "Bad Jump!"
+		IL_017C: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+		IL_0181: throw
 
-		IL_017C: nop
-		IL_017D: stloc.s   V_24
-		IL_017F: ldloc.1
-		IL_0180: ldloc.s   V_24
-		IL_0182: ldc.i4.1
-		IL_0183: mul
-		IL_0184: add
-		IL_0185: stloc.s   V_25
-		IL_0187: ldarg.0
-		IL_0188: ldc.i4.0
-		IL_0189: ldc.i8    24
-		IL_0192: ldc.i4.0
-		IL_0193: call      void Main::llvm_memset_p0_i64(native int, uint8, int64, bool)
-		IL_0198: ldloc.s   V_24
-		IL_019A: ldc.i4.s  21
-		IL_019C: ceq
-		IL_019E: stloc.s   V_26
-		IL_01A0: ldc.i4.5
-		IL_01A1: stloc.0
-		IL_01A2: ldloc.s   V_26
-		IL_01A4: brtrue.s  IL_01A9
+		IL_0182: nop
+		IL_0183: stloc.s   V_24
+		IL_0185: ldloc.1
+		IL_0186: ldloc.s   V_24
+		IL_0188: ldc.i4.1
+		IL_0189: mul
+		IL_018A: add
+		IL_018B: stloc.s   V_25
+		IL_018D: ldarg.0
+		IL_018E: ldc.i4.0
+		IL_018F: ldc.i8    24
+		IL_0198: ldc.i4.0
+		IL_0199: call      void Main::llvm_memset_p0_i64(native int, uint8, int64, bool)
+		IL_019E: ldloc.s   V_24
+		IL_01A0: ldc.i4.s  21
+		IL_01A2: ceq
+		IL_01A4: stloc.s   V_26
+		IL_01A6: ldc.i4.5
+		IL_01A7: stloc.0
+		IL_01A8: ldloc.s   V_26
+		IL_01AA: brtrue.s  IL_01AF
 
-		IL_01A6: nop
-		IL_01A7: br.s      IL_01C4
+		IL_01AC: nop
+		IL_01AD: br.s      IL_01CA
 
-		IL_01A9: nop
-		IL_01AA: ldarg.0
-		IL_01AB: ldc.i4.0
-		IL_01AC: ldc.i4.s  28
-		IL_01AE: mul
-		IL_01AF: add
-		IL_01B0: ldc.i4.2
-		IL_01B1: ldc.i4.s  28
-		IL_01B3: mul
-		IL_01B4: add
-		IL_01B5: stloc.s   V_27
-		IL_01B7: ldloc.s   V_27
-		IL_01B9: ldc.i4.s  15
-		IL_01BB: stind.i4
-		IL_01BC: ldc.i4.6
-		IL_01BD: stloc.0
-		IL_01BE: nop
-		IL_01BF: br        IL_0321
-
+		IL_01AF: nop
+		IL_01B0: ldarg.0
+		IL_01B1: ldflda    valuetype 'Struct_union_std___String_val<std___Simple_types<char>>___Bxty' Struct_class_std___String_val::element_0
+		IL_01B6: ldc.i4.2
+		IL_01B7: ldc.i4.s  20
+		IL_01B9: mul
+		IL_01BA: add
+		IL_01BB: stloc.s   V_27
+		IL_01BD: ldloc.s   V_27
+		IL_01BF: ldc.i4.s  15
+		IL_01C1: stind.i4
+		IL_01C2: ldc.i4.6
+		IL_01C3: stloc.0
 		IL_01C4: nop
-		IL_01C5: ldc.i4.s  21
-		IL_01C7: ldloc.s   V_24
-		IL_01C9: sub
-		IL_01CA: stloc.s   V_28
-		IL_01CC: ldloc.s   V_24
-		IL_01CE: ldc.i4.s  21
-		IL_01D0: cgt
-		IL_01D2: stloc.s   V_29
-		IL_01D4: ldc.i4.7
-		IL_01D5: stloc.0
-		IL_01D6: ldloc.s   V_29
-		IL_01D8: brtrue.s  IL_01DD
+		IL_01C5: br        IL_0327
 
-		IL_01DA: nop
-		IL_01DB: br.s      IL_01EF
+		IL_01CA: nop
+		IL_01CB: ldc.i4.s  21
+		IL_01CD: ldloc.s   V_24
+		IL_01CF: sub
+		IL_01D0: stloc.s   V_28
+		IL_01D2: ldloc.s   V_24
+		IL_01D4: ldc.i4.s  21
+		IL_01D6: cgt
+		IL_01D8: stloc.s   V_29
+		IL_01DA: ldc.i4.7
+		IL_01DB: stloc.0
+		IL_01DC: ldloc.s   V_29
+		IL_01DE: brtrue.s  IL_01E3
 
-		IL_01DD: nop
-		IL_01DE: call      void Main::?_Xlen_string@std@@YAXXZ()
-		IL_01E3: ldstr     "unreachable!!!"
-		IL_01E8: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-		IL_01ED: throw
+		IL_01E0: nop
+		IL_01E1: br.s      IL_01F5
 
-		IL_01EE: nop
+		IL_01E3: nop
+		IL_01E4: call      void Main::?_Xlen_string@std@@YAXXZ()
+		IL_01E9: ldstr     "unreachable!!!"
+		IL_01EE: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+		IL_01F3: throw
 
-		IL_01EF: nop
-		IL_01F0: ldloc.s   V_28
-		IL_01F2: conv.u
-		IL_01F3: ldc.i4.s  16
-		IL_01F5: conv.u
-		IL_01F6: clt
-		IL_01F8: stloc.s   V_30
-		IL_01FA: ldc.i4.s  9
-		IL_01FC: stloc.0
-		IL_01FD: ldloc.s   V_30
-		IL_01FF: brtrue.s  IL_0204
+		IL_01F4: nop
 
-		IL_0201: nop
-		IL_0202: br.s      IL_023D
+		IL_01F5: nop
+		IL_01F6: ldloc.s   V_28
+		IL_01F8: conv.u
+		IL_01F9: ldc.i4.s  16
+		IL_01FB: conv.u
+		IL_01FC: clt
+		IL_01FE: stloc.s   V_30
+		IL_0200: ldc.i4.s  9
+		IL_0202: stloc.0
+		IL_0203: ldloc.s   V_30
+		IL_0205: brtrue.s  IL_020A
 
-		IL_0204: nop
-		IL_0205: ldarg.0
-		IL_0206: ldc.i4.0
-		IL_0207: ldc.i4.s  28
-		IL_0209: mul
-		IL_020A: add
-		IL_020B: ldc.i4.1
-		IL_020C: ldc.i4.s  28
-		IL_020E: mul
-		IL_020F: add
-		IL_0210: stloc.s   V_31
-		IL_0212: ldloc.s   V_31
-		IL_0214: ldloc.s   V_28
-		IL_0216: stind.i4
-		IL_0217: ldarg.0
-		IL_0218: ldc.i4.0
-		IL_0219: ldc.i4.s  28
-		IL_021B: mul
-		IL_021C: add
-		IL_021D: ldc.i4.2
-		IL_021E: ldc.i4.s  28
-		IL_0220: mul
-		IL_0221: add
-		IL_0222: stloc.s   V_32
-		IL_0224: ldloc.s   V_32
-		IL_0226: ldc.i4.s  15
-		IL_0228: stind.i4
-		IL_0229: ldarg.0
-		IL_022A: ldloc.s   V_25
-		IL_022C: ldloc.s   V_28
-		IL_022E: ldc.i4.0
-		IL_022F: call      void Main::llvm_memcpy_p0_p0_i32(native int, native int, int32, bool)
-		IL_0234: ldc.i4.s  10
-		IL_0236: stloc.0
-		IL_0237: nop
-		IL_0238: br        IL_0321
+		IL_0207: nop
+		IL_0208: br.s      IL_0243
 
+		IL_020A: nop
+		IL_020B: ldarg.0
+		IL_020C: ldflda    valuetype 'Struct_union_std___String_val<std___Simple_types<char>>___Bxty' Struct_class_std___String_val::element_0
+		IL_0211: ldflda    valuetype Array_i8_12 'Struct_union_std___String_val<std___Simple_types<char>>___Bxty'::element_1
+		IL_0216: stloc.s   V_31
+		IL_0218: ldloc.s   V_31
+		IL_021A: ldloc.s   V_28
+		IL_021C: stind.i4
+		IL_021D: ldarg.0
+		IL_021E: ldflda    valuetype 'Struct_union_std___String_val<std___Simple_types<char>>___Bxty' Struct_class_std___String_val::element_0
+		IL_0223: ldc.i4.2
+		IL_0224: ldc.i4.s  20
+		IL_0226: mul
+		IL_0227: add
+		IL_0228: stloc.s   V_32
+		IL_022A: ldloc.s   V_32
+		IL_022C: ldc.i4.s  15
+		IL_022E: stind.i4
+		IL_022F: ldarg.0
+		IL_0230: ldloc.s   V_25
+		IL_0232: ldloc.s   V_28
+		IL_0234: ldc.i4.0
+		IL_0235: call      void Main::llvm_memcpy_p0_p0_i32(native int, native int, int32, bool)
+		IL_023A: ldc.i4.s  10
+		IL_023C: stloc.0
 		IL_023D: nop
-		IL_023E: ldarg.0
-		IL_023F: ldc.i4.0
-		IL_0240: ldc.i4.s  28
-		IL_0242: mul
-		IL_0243: add
-		IL_0244: ldc.i4.2
-		IL_0245: ldc.i4.s  28
-		IL_0247: mul
-		IL_0248: add
-		IL_0249: stloc.s   V_33
-		IL_024B: ldloc.s   V_28
-		IL_024D: ldc.i4.s  15
-		IL_024F: or
-		IL_0250: stloc.s   V_34
-		IL_0252: ldloc.s   V_34
-		IL_0254: ldc.i4.s  22
-		IL_0256: call      int32 Main::llvm_umax_i32(int32, int32)
-		IL_025B: stloc.s   V_35
-		IL_025D: ldloc.s   V_35
-		IL_025F: conv.u
-		IL_0260: ldc.i4    4094
+		IL_023E: br        IL_0327
+
+		IL_0243: nop
+		IL_0244: ldarg.0
+		IL_0245: ldflda    valuetype 'Struct_union_std___String_val<std___Simple_types<char>>___Bxty' Struct_class_std___String_val::element_0
+		IL_024A: ldc.i4.2
+		IL_024B: ldc.i4.s  20
+		IL_024D: mul
+		IL_024E: add
+		IL_024F: stloc.s   V_33
+		IL_0251: ldloc.s   V_28
+		IL_0253: ldc.i4.s  15
+		IL_0255: or
+		IL_0256: stloc.s   V_34
+		IL_0258: ldloc.s   V_34
+		IL_025A: ldc.i4.s  22
+		IL_025C: call      int32 Main::llvm_umax_i32(int32, int32)
+		IL_0261: stloc.s   V_35
+		IL_0263: ldloc.s   V_35
 		IL_0265: conv.u
-		IL_0266: cgt
-		IL_0268: stloc.s   V_36
-		IL_026A: ldc.i4.s  11
-		IL_026C: stloc.0
-		IL_026D: ldloc.s   V_36
-		IL_026F: brtrue.s  IL_0274
+		IL_0266: ldc.i4    4094
+		IL_026B: conv.u
+		IL_026C: cgt
+		IL_026E: stloc.s   V_36
+		IL_0270: ldc.i4.s  11
+		IL_0272: stloc.0
+		IL_0273: ldloc.s   V_36
+		IL_0275: brtrue.s  IL_027A
 
-		IL_0271: nop
-		IL_0272: br.s      IL_02AE
+		IL_0277: nop
+		IL_0278: br.s      IL_02B4
 
-		IL_0274: nop
-		IL_0275: ldloc.s   V_35
-		IL_0277: ldc.i4.s  36
-		IL_0279: add
-		IL_027A: stloc.s   V_37
-		IL_027C: ldloc.s   V_37
-		IL_027E: call      native int Main::NEW(int32)
-		IL_0283: stloc.s   V_38
-		IL_0285: ldloc.s   V_38
-		IL_0287: stloc.s   V_39
-		IL_0289: ldloc.s   V_39
-		IL_028B: ldc.i4.s  35
-		IL_028D: add
-		IL_028E: stloc.s   V_40
-		IL_0290: ldloc.s   V_40
-		IL_0292: ldc.i4.s  -32
-		IL_0294: or
-		IL_0295: stloc.s   V_41
-		IL_0297: ldloc.s   V_41
-		IL_0299: stloc.s   V_42
-		IL_029B: ldloc.s   V_42
-		IL_029D: ldc.i4.m1
-		IL_029E: ldc.i4.4
-		IL_029F: mul
-		IL_02A0: add
-		IL_02A1: stloc.s   V_43
-		IL_02A3: ldloc.s   V_43
-		IL_02A5: ldloc.s   V_39
-		IL_02A7: stind.i4
-		IL_02A8: ldc.i4.s  12
-		IL_02AA: stloc.0
-		IL_02AB: nop
-		IL_02AC: br.s      IL_02C4
+		IL_027A: nop
+		IL_027B: ldloc.s   V_35
+		IL_027D: ldc.i4.s  36
+		IL_027F: add
+		IL_0280: stloc.s   V_37
+		IL_0282: ldloc.s   V_37
+		IL_0284: call      native int Main::NEW(int32)
+		IL_0289: stloc.s   V_38
+		IL_028B: ldloc.s   V_38
+		IL_028D: stloc.s   V_39
+		IL_028F: ldloc.s   V_39
+		IL_0291: ldc.i4.s  35
+		IL_0293: add
+		IL_0294: stloc.s   V_40
+		IL_0296: ldloc.s   V_40
+		IL_0298: ldc.i4.s  -32
+		IL_029A: or
+		IL_029B: stloc.s   V_41
+		IL_029D: ldloc.s   V_41
+		IL_029F: stloc.s   V_42
+		IL_02A1: ldloc.s   V_42
+		IL_02A3: ldc.i4.m1
+		IL_02A4: ldc.i4.4
+		IL_02A5: mul
+		IL_02A6: add
+		IL_02A7: stloc.s   V_43
+		IL_02A9: ldloc.s   V_43
+		IL_02AB: ldloc.s   V_39
+		IL_02AD: stind.i4
+		IL_02AE: ldc.i4.s  12
+		IL_02B0: stloc.0
+		IL_02B1: nop
+		IL_02B2: br.s      IL_02CA
 
-		IL_02AE: nop
-		IL_02AF: ldloc.s   V_35
-		IL_02B1: ldc.i4.1
-		IL_02B2: add
-		IL_02B3: stloc.s   V_44
-		IL_02B5: ldloc.s   V_44
-		IL_02B7: call      native int Main::NEW(int32)
-		IL_02BC: stloc.s   V_45
-		IL_02BE: ldc.i4.s  13
-		IL_02C0: stloc.0
-		IL_02C1: nop
-		IL_02C2: br.s      IL_02C4
+		IL_02B4: nop
+		IL_02B5: ldloc.s   V_35
+		IL_02B7: ldc.i4.1
+		IL_02B8: add
+		IL_02B9: stloc.s   V_44
+		IL_02BB: ldloc.s   V_44
+		IL_02BD: call      native int Main::NEW(int32)
+		IL_02C2: stloc.s   V_45
+		IL_02C4: ldc.i4.s  13
+		IL_02C6: stloc.0
+		IL_02C7: nop
+		IL_02C8: br.s      IL_02CA
 
-		IL_02C4: nop
-		IL_02C5: ldloc.s   V_42
-		IL_02C7: ldloc.0
-		IL_02C8: ldc.i4.s  12
-		IL_02CA: ceq
-		IL_02CC: brtrue.s  IL_02E4
+		IL_02CA: nop
+		IL_02CB: ldloc.s   V_42
+		IL_02CD: ldloc.0
+		IL_02CE: ldc.i4.s  12
+		IL_02D0: ceq
+		IL_02D2: brtrue.s  IL_02EA
 
-		IL_02CE: pop
-		IL_02CF: ldloc.s   V_45
-		IL_02D1: ldloc.0
-		IL_02D2: ldc.i4.s  13
-		IL_02D4: ceq
-		IL_02D6: brtrue.s  IL_02E4
+		IL_02D4: pop
+		IL_02D5: ldloc.s   V_45
+		IL_02D7: ldloc.0
+		IL_02D8: ldc.i4.s  13
+		IL_02DA: ceq
+		IL_02DC: brtrue.s  IL_02EA
 
-		IL_02D8: pop
-		IL_02D9: ldstr     "Bad Jump!"
-		IL_02DE: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
-		IL_02E3: throw
+		IL_02DE: pop
+		IL_02DF: ldstr     "Bad Jump!"
+		IL_02E4: newobj    instance void [System.Private.CoreLib]System.Exception::.ctor(string)
+		IL_02E9: throw
 
-		IL_02E4: nop
-		IL_02E5: stloc.s   V_46
-		IL_02E7: ldarg.0
-		IL_02E8: ldloc.s   V_46
-		IL_02EA: stind.i
-		IL_02EB: ldarg.0
-		IL_02EC: ldc.i4.0
-		IL_02ED: ldc.i4.s  28
-		IL_02EF: mul
-		IL_02F0: add
-		IL_02F1: ldc.i4.1
-		IL_02F2: ldc.i4.s  28
-		IL_02F4: mul
-		IL_02F5: add
-		IL_02F6: stloc.s   V_47
-		IL_02F8: ldloc.s   V_47
-		IL_02FA: ldloc.s   V_28
-		IL_02FC: stind.i4
-		IL_02FD: ldloc.s   V_33
-		IL_02FF: ldloc.s   V_35
-		IL_0301: stind.i4
-		IL_0302: ldloc.s   V_46
-		IL_0304: ldloc.s   V_25
-		IL_0306: ldloc.s   V_28
-		IL_0308: ldc.i4.0
-		IL_0309: call      void Main::llvm_memcpy_p0_p0_i32(native int, native int, int32, bool)
-		IL_030E: ldloc.s   V_46
-		IL_0310: ldloc.s   V_28
-		IL_0312: ldc.i4.1
-		IL_0313: mul
-		IL_0314: add
-		IL_0315: stloc.s   V_48
-		IL_0317: ldloc.s   V_48
-		IL_0319: ldc.i4.0
-		IL_031A: stind.i1
-		IL_031B: ldc.i4.s  14
-		IL_031D: stloc.0
-		IL_031E: nop
-		IL_031F: br.s      IL_0321
+		IL_02EA: nop
+		IL_02EB: stloc.s   V_46
+		IL_02ED: ldarg.0
+		IL_02EE: ldloc.s   V_46
+		IL_02F0: stind.i
+		IL_02F1: ldarg.0
+		IL_02F2: ldflda    valuetype 'Struct_union_std___String_val<std___Simple_types<char>>___Bxty' Struct_class_std___String_val::element_0
+		IL_02F7: ldflda    valuetype Array_i8_12 'Struct_union_std___String_val<std___Simple_types<char>>___Bxty'::element_1
+		IL_02FC: stloc.s   V_47
+		IL_02FE: ldloc.s   V_47
+		IL_0300: ldloc.s   V_28
+		IL_0302: stind.i4
+		IL_0303: ldloc.s   V_33
+		IL_0305: ldloc.s   V_35
+		IL_0307: stind.i4
+		IL_0308: ldloc.s   V_46
+		IL_030A: ldloc.s   V_25
+		IL_030C: ldloc.s   V_28
+		IL_030E: ldc.i4.0
+		IL_030F: call      void Main::llvm_memcpy_p0_p0_i32(native int, native int, int32, bool)
+		IL_0314: ldloc.s   V_46
+		IL_0316: ldloc.s   V_28
+		IL_0318: ldc.i4.1
+		IL_0319: mul
+		IL_031A: add
+		IL_031B: stloc.s   V_48
+		IL_031D: ldloc.s   V_48
+		IL_031F: ldc.i4.0
+		IL_0320: stind.i1
+		IL_0321: ldc.i4.s  14
+		IL_0323: stloc.0
+		IL_0324: nop
+		IL_0325: br.s      IL_0327
 
-		IL_0321: nop
-		IL_0322: ldc.i8    21
-		IL_032B: ldloc.1
-		IL_032C: call      void Main::llvm_lifetime_end_p0(int64, native int)
-		IL_0331: nop
-		IL_0332: ret
+		IL_0327: nop
+		IL_0328: ldc.i8    21
+		IL_0331: ldloc.1
+		IL_0332: call      void Main::llvm_lifetime_end_p0(int64, native int)
+		IL_0337: nop
+		IL_0338: ret
 	} // end of method Main::??$_Integral_to_string@DH@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@H@Z
 
 	.method public hidebysig static 
@@ -1880,41 +1845,38 @@
 		IL_0002: ldsfld    native int Main::___7exception_std__6B_
 		IL_0007: stind.i
 		IL_0008: ldarg.0
-		IL_0009: ldc.i4.0
-		IL_000A: ldc.i4.s  17
-		IL_000C: mul
-		IL_000D: add
+		IL_0009: ldflda    native int Struct_class_std__exception::element_0
 		IL_000E: ldc.i4.1
-		IL_000F: ldc.i4.s  17
-		IL_0011: mul
-		IL_0012: add
-		IL_0013: stloc.1
-		IL_0014: ldloc.1
-		IL_0015: call      void Main::__std_exception_destroy(native int)
-		IL_001A: ldarg.1
-		IL_001B: ldc.i4.0
-		IL_001C: ceq
-		IL_001E: stloc.2
-		IL_001F: ldc.i4.0
-		IL_0020: stloc.0
-		IL_0021: ldloc.2
-		IL_0022: brtrue.s  IL_0033
+		IL_000F: ldc.i4.8
+		IL_0010: mul
+		IL_0011: add
+		IL_0012: stloc.1
+		IL_0013: ldloc.1
+		IL_0014: call      void Main::__std_exception_destroy(native int)
+		IL_0019: ldarg.1
+		IL_001A: ldc.i4.0
+		IL_001B: ceq
+		IL_001D: stloc.2
+		IL_001E: ldc.i4.0
+		IL_001F: stloc.0
+		IL_0020: ldloc.2
+		IL_0021: brtrue.s  IL_0032
 
-		IL_0024: nop
-		IL_0025: br.s      IL_0027
+		IL_0023: nop
+		IL_0024: br.s      IL_0026
 
-		IL_0027: nop
-		IL_0028: ldarg.0
-		IL_0029: call      void Main::DELETE(native int)
-		IL_002E: ldc.i4.1
-		IL_002F: stloc.0
-		IL_0030: nop
-		IL_0031: br.s      IL_0033
+		IL_0026: nop
+		IL_0027: ldarg.0
+		IL_0028: call      void Main::DELETE(native int)
+		IL_002D: ldc.i4.1
+		IL_002E: stloc.0
+		IL_002F: nop
+		IL_0030: br.s      IL_0032
 
-		IL_0033: nop
-		IL_0034: ldarg.0
-		IL_0035: nop
-		IL_0036: ret
+		IL_0032: nop
+		IL_0033: ldarg.0
+		IL_0034: nop
+		IL_0035: ret
 	} // end of method Main::??_Gbad_array_new_length@std@@UAEPAXI@Z
 
 	.method public hidebysig static 
@@ -1933,34 +1895,31 @@
 
 		IL_0000: nop
 		IL_0001: ldarg.0
-		IL_0002: ldc.i4.0
-		IL_0003: ldc.i4.s  17
-		IL_0005: mul
-		IL_0006: add
+		IL_0002: ldflda    native int Struct_class_std__exception::element_0
 		IL_0007: ldc.i4.1
-		IL_0008: ldc.i4.s  17
-		IL_000A: mul
-		IL_000B: add
-		IL_000C: stloc.1
-		IL_000D: ldloc.1
-		IL_000E: ldind.i
-		IL_000F: stloc.2
-		IL_0010: ldloc.2
-		IL_0011: ldc.i8    0
-		IL_001A: ceq
-		IL_001C: stloc.3
-		IL_001D: ldsfld    valuetype Array_i8_18* Main::___C__0BC_EOODALEL_Unknown_5exception__AA_
-		IL_0022: ldloc.3
-		IL_0023: brtrue.s  IL_0027
+		IL_0008: ldc.i4.8
+		IL_0009: mul
+		IL_000A: add
+		IL_000B: stloc.1
+		IL_000C: ldloc.1
+		IL_000D: ldind.i
+		IL_000E: stloc.2
+		IL_000F: ldloc.2
+		IL_0010: ldc.i8    0
+		IL_0019: ceq
+		IL_001B: stloc.3
+		IL_001C: ldsfld    valuetype Array_i8_18* Main::___C__0BC_EOODALEL_Unknown_5exception__AA_
+		IL_0021: ldloc.3
+		IL_0022: brtrue.s  IL_0026
 
-		IL_0025: pop
-		IL_0026: ldloc.2
+		IL_0024: pop
+		IL_0025: ldloc.2
 
-		IL_0027: nop
-		IL_0028: stloc.s   V_4
-		IL_002A: ldloc.s   V_4
-		IL_002C: nop
-		IL_002D: ret
+		IL_0026: nop
+		IL_0027: stloc.s   V_4
+		IL_0029: ldloc.s   V_4
+		IL_002B: nop
+		IL_002C: ret
 	} // end of method Main::?what@exception@std@@UBEPBDXZ
 
 	.method public hidebysig static 
@@ -1981,41 +1940,38 @@
 		IL_0002: ldsfld    native int Main::___7exception_std__6B_
 		IL_0007: stind.i
 		IL_0008: ldarg.0
-		IL_0009: ldc.i4.0
-		IL_000A: ldc.i4.s  17
-		IL_000C: mul
-		IL_000D: add
+		IL_0009: ldflda    native int Struct_class_std__exception::element_0
 		IL_000E: ldc.i4.1
-		IL_000F: ldc.i4.s  17
-		IL_0011: mul
-		IL_0012: add
-		IL_0013: stloc.1
-		IL_0014: ldloc.1
-		IL_0015: call      void Main::__std_exception_destroy(native int)
-		IL_001A: ldarg.1
-		IL_001B: ldc.i4.0
-		IL_001C: ceq
-		IL_001E: stloc.2
-		IL_001F: ldc.i4.0
-		IL_0020: stloc.0
-		IL_0021: ldloc.2
-		IL_0022: brtrue.s  IL_0033
+		IL_000F: ldc.i4.8
+		IL_0010: mul
+		IL_0011: add
+		IL_0012: stloc.1
+		IL_0013: ldloc.1
+		IL_0014: call      void Main::__std_exception_destroy(native int)
+		IL_0019: ldarg.1
+		IL_001A: ldc.i4.0
+		IL_001B: ceq
+		IL_001D: stloc.2
+		IL_001E: ldc.i4.0
+		IL_001F: stloc.0
+		IL_0020: ldloc.2
+		IL_0021: brtrue.s  IL_0032
 
-		IL_0024: nop
-		IL_0025: br.s      IL_0027
+		IL_0023: nop
+		IL_0024: br.s      IL_0026
 
-		IL_0027: nop
-		IL_0028: ldarg.0
-		IL_0029: call      void Main::DELETE(native int)
-		IL_002E: ldc.i4.1
-		IL_002F: stloc.0
-		IL_0030: nop
-		IL_0031: br.s      IL_0033
+		IL_0026: nop
+		IL_0027: ldarg.0
+		IL_0028: call      void Main::DELETE(native int)
+		IL_002D: ldc.i4.1
+		IL_002E: stloc.0
+		IL_002F: nop
+		IL_0030: br.s      IL_0032
 
-		IL_0033: nop
-		IL_0034: ldarg.0
-		IL_0035: nop
-		IL_0036: ret
+		IL_0032: nop
+		IL_0033: ldarg.0
+		IL_0034: nop
+		IL_0035: ret
 	} // end of method Main::??_Gbad_alloc@std@@UAEPAXI@Z
 
 	.method public hidebysig static 
@@ -2036,41 +1992,38 @@
 		IL_0002: ldsfld    native int Main::___7exception_std__6B_
 		IL_0007: stind.i
 		IL_0008: ldarg.0
-		IL_0009: ldc.i4.0
-		IL_000A: ldc.i4.s  17
-		IL_000C: mul
-		IL_000D: add
+		IL_0009: ldflda    native int Struct_class_std__exception::element_0
 		IL_000E: ldc.i4.1
-		IL_000F: ldc.i4.s  17
-		IL_0011: mul
-		IL_0012: add
-		IL_0013: stloc.1
-		IL_0014: ldloc.1
-		IL_0015: call      void Main::__std_exception_destroy(native int)
-		IL_001A: ldarg.1
-		IL_001B: ldc.i4.0
-		IL_001C: ceq
-		IL_001E: stloc.2
-		IL_001F: ldc.i4.0
-		IL_0020: stloc.0
-		IL_0021: ldloc.2
-		IL_0022: brtrue.s  IL_0033
+		IL_000F: ldc.i4.8
+		IL_0010: mul
+		IL_0011: add
+		IL_0012: stloc.1
+		IL_0013: ldloc.1
+		IL_0014: call      void Main::__std_exception_destroy(native int)
+		IL_0019: ldarg.1
+		IL_001A: ldc.i4.0
+		IL_001B: ceq
+		IL_001D: stloc.2
+		IL_001E: ldc.i4.0
+		IL_001F: stloc.0
+		IL_0020: ldloc.2
+		IL_0021: brtrue.s  IL_0032
 
-		IL_0024: nop
-		IL_0025: br.s      IL_0027
+		IL_0023: nop
+		IL_0024: br.s      IL_0026
 
-		IL_0027: nop
-		IL_0028: ldarg.0
-		IL_0029: call      void Main::DELETE(native int)
-		IL_002E: ldc.i4.1
-		IL_002F: stloc.0
-		IL_0030: nop
-		IL_0031: br.s      IL_0033
+		IL_0026: nop
+		IL_0027: ldarg.0
+		IL_0028: call      void Main::DELETE(native int)
+		IL_002D: ldc.i4.1
+		IL_002E: stloc.0
+		IL_002F: nop
+		IL_0030: br.s      IL_0032
 
-		IL_0033: nop
-		IL_0034: ldarg.0
-		IL_0035: nop
-		IL_0036: ret
+		IL_0032: nop
+		IL_0033: ldarg.0
+		IL_0034: nop
+		IL_0035: ret
 	} // end of method Main::??_Gexception@std@@UAEPAXI@Z
 
 	.method public hidebysig static 
@@ -2080,11 +2033,9 @@
 	{
 		.maxstack 8
 
-		IL_0000: nop
-		IL_0001: ldarg.0
-		IL_0002: call      void [System.Runtime.InteropServices]System.Runtime.InteropServices.NativeMemory::Free(void*)
-		IL_0007: nop
-		IL_0008: ret
+		IL_0000: ldarg.0
+		IL_0001: call      void [System.Runtime.InteropServices]System.Runtime.InteropServices.NativeMemory::Free(void*)
+		IL_0006: ret
 	} // end of method Main::DELETE
 
 	.method public hidebysig static pinvokeimpl("ucrtbase.dll" lasterr cdecl) 
@@ -2099,20 +2050,12 @@
 			int32 '%0'
 		) cil managed 
 	{
-		.maxstack 1
-		.locals init (
-			[0] void*
-		)
+		.maxstack 8
 
-		IL_0000: nop
-		IL_0001: ldarg.0
-		IL_0002: conv.i
-		IL_0003: call      void* [System.Runtime.InteropServices]System.Runtime.InteropServices.NativeMemory::Alloc(native unsigned int)
-		IL_0008: stloc.0
-		IL_0009: br.s      IL_000B
-
-		IL_000B: ldloc.0
-		IL_000C: ret
+		IL_0000: ldarg.0
+		IL_0001: conv.i
+		IL_0002: call      void* [System.Runtime.InteropServices]System.Runtime.InteropServices.NativeMemory::Alloc(native unsigned int)
+		IL_0007: ret
 	} // end of method Main::NEW
 
 	.method public hidebysig static 
@@ -2126,47 +2069,40 @@
 		.maxstack 2
 		.locals init (
 			[0] uint8*,
-			[1] uint8*,
-			[2] bool
+			[1] uint8*
 		)
 
-		IL_0000: nop
-		IL_0001: ldarga.s  '%1'
-		IL_0003: call      instance void* [System.Runtime]System.IntPtr::ToPointer()
-		IL_0008: stloc.0
-		IL_0009: ldarga.s  '%0'
-		IL_000B: call      instance void* [System.Runtime]System.IntPtr::ToPointer()
-		IL_0010: stloc.1
-		IL_0011: br.s      IL_0026
-		// loop start (head: IL_0026)
-			IL_0013: nop
-			IL_0014: ldloc.1
-			IL_0015: ldloc.0
-			IL_0016: ldind.u1
-			IL_0017: stind.i1
-			IL_0018: ldloc.0
-			IL_0019: ldc.i4.1
-			IL_001A: add
-			IL_001B: stloc.0
-			IL_001C: ldloc.1
-			IL_001D: ldc.i4.1
-			IL_001E: add
-			IL_001F: stloc.1
-			IL_0020: ldarg.2
-			IL_0021: ldc.i4.1
-			IL_0022: sub
-			IL_0023: starg.s   '%2'
-			IL_0025: nop
+		IL_0000: ldarga.s  '%1'
+		IL_0002: call      instance void* [System.Runtime]System.IntPtr::ToPointer()
+		IL_0007: stloc.0
+		IL_0008: ldarga.s  '%0'
+		IL_000A: call      instance void* [System.Runtime]System.IntPtr::ToPointer()
+		IL_000F: stloc.1
+		IL_0010: br.s      IL_0023
+		// loop start (head: IL_0023)
+			IL_0012: ldloc.1
+			IL_0013: ldloc.0
+			IL_0014: ldind.u1
+			IL_0015: stind.i1
+			IL_0016: ldloc.0
+			IL_0017: ldc.i4.1
+			IL_0018: add
+			IL_0019: stloc.0
+			IL_001A: ldloc.1
+			IL_001B: ldc.i4.1
+			IL_001C: add
+			IL_001D: stloc.1
+			IL_001E: ldarg.2
+			IL_001F: ldc.i4.1
+			IL_0020: sub
+			IL_0021: starg.s   '%2'
 
-			IL_0026: ldarg.2
-			IL_0027: ldc.i4.0
-			IL_0028: cgt
-			IL_002A: stloc.2
-			IL_002B: ldloc.2
-			IL_002C: brtrue.s  IL_0013
+			IL_0023: ldarg.2
+			IL_0024: ldc.i4.0
+			IL_0025: bgt.s     IL_0012
 		// end loop
 
-		IL_002E: ret
+		IL_0027: ret
 	} // end of method Main::llvm_memcpy_p0_p0_i32
 
 	.method public hidebysig static 
@@ -2177,11 +2113,9 @@
 	{
 		.maxstack 8
 
-		IL_0000: nop
-		IL_0001: ldarg.0
-		IL_0002: call      void [System.Runtime.InteropServices]System.Runtime.InteropServices.NativeMemory::Free(void*)
-		IL_0007: nop
-		IL_0008: ret
+		IL_0000: ldarg.0
+		IL_0001: call      void [System.Runtime.InteropServices]System.Runtime.InteropServices.NativeMemory::Free(void*)
+		IL_0006: ret
 	} // end of method Main::DELETE
 
 	.method public hidebysig static 
@@ -2194,41 +2128,34 @@
 	{
 		.maxstack 2
 		.locals init (
-			[0] uint8*,
-			[1] bool
+			[0] uint8*
 		)
 
-		IL_0000: nop
-		IL_0001: ldarga.s  '%0'
-		IL_0003: call      instance void* [System.Runtime]System.IntPtr::ToPointer()
-		IL_0008: stloc.0
-		IL_0009: br.s      IL_001A
-		// loop start (head: IL_001A)
-			IL_000B: nop
-			IL_000C: ldloc.0
-			IL_000D: ldarg.1
-			IL_000E: stind.i1
-			IL_000F: ldloc.0
-			IL_0010: ldc.i4.1
-			IL_0011: add
-			IL_0012: stloc.0
-			IL_0013: ldarg.2
-			IL_0014: ldc.i4.1
-			IL_0015: conv.i8
-			IL_0016: sub
-			IL_0017: starg.s   '%2'
-			IL_0019: nop
+		IL_0000: ldarga.s  '%0'
+		IL_0002: call      instance void* [System.Runtime]System.IntPtr::ToPointer()
+		IL_0007: stloc.0
+		IL_0008: br.s      IL_0017
+		// loop start (head: IL_0017)
+			IL_000A: ldloc.0
+			IL_000B: ldarg.1
+			IL_000C: stind.i1
+			IL_000D: ldloc.0
+			IL_000E: ldc.i4.1
+			IL_000F: add
+			IL_0010: stloc.0
+			IL_0011: ldarg.2
+			IL_0012: ldc.i4.1
+			IL_0013: conv.i8
+			IL_0014: sub
+			IL_0015: starg.s   '%2'
 
-			IL_001A: ldarg.2
-			IL_001B: ldc.i4.0
-			IL_001C: conv.i8
-			IL_001D: cgt
-			IL_001F: stloc.1
-			IL_0020: ldloc.1
-			IL_0021: brtrue.s  IL_000B
+			IL_0017: ldarg.2
+			IL_0018: ldc.i4.0
+			IL_0019: conv.i8
+			IL_001A: bgt.s     IL_000A
 		// end loop
 
-		IL_0023: ret
+		IL_001C: ret
 	} // end of method Main::llvm_memset_p0_i64
 
 	.method public hidebysig static 
@@ -2901,108 +2828,87 @@
 		.entrypoint
 		.locals init (
 			[0] uint8**,
-			[1] bool,
-			[2] int32,
-			[3] int32,
-			[4] uint8[],
-			[5] uint8*,
-			[6] uint8[] pinned,
-			[7] bool
+			[1] int32,
+			[2] uint8*,
+			[3] uint8[] pinned
 		)
 
 		IL_0000: call      void Main::CreateVars()
-		IL_0005: nop
-		IL_0006: ldarg.0
-		IL_0007: ldlen
-		IL_0008: ldc.i4.0
-		IL_0009: ceq
-		IL_000B: stloc.1
-		IL_000C: ldloc.1
-		IL_000D: brfalse.s IL_001A
+		IL_0005: ldarg.0
+		IL_0006: ldlen
+		IL_0007: brtrue.s  IL_0012
 
-		IL_000F: ldc.i4.0
-		IL_0010: ldc.i4.0
-		IL_0011: conv.i
-		IL_0012: call      int32 Main::main(int32, native int)
-		IL_0017: stloc.2
-		IL_0018: br.s      IL_0088
+		IL_0009: ldc.i4.0
+		IL_000A: ldc.i4.0
+		IL_000B: conv.i
+		IL_000C: call      int32 Main::main(int32, native int)
+		IL_0011: ret
 
-		IL_001A: ldarg.0
-		IL_001B: ldlen
-		IL_001C: conv.i4
-		IL_001D: conv.u
-		IL_001E: sizeof    uint8*
-		IL_0024: mul.ovf.un
-		IL_0025: localloc
-		IL_0027: stloc.0
-		IL_0028: ldc.i4.0
-		IL_0029: stloc.3
-		IL_002A: br.s      IL_0070
-		// loop start (head: IL_0070)
-			IL_002C: nop
-			IL_002D: call      class [System.Runtime]System.Text.Encoding [System.Runtime]System.Text.Encoding::get_ASCII()
-			IL_0032: ldarg.0
-			IL_0033: ldloc.3
-			IL_0034: ldelem.ref
-			IL_0035: callvirt  instance uint8[] [System.Runtime]System.Text.Encoding::GetBytes(string)
-			IL_003A: stloc.s   V_4
-			IL_003C: ldloc.s   V_4
-			IL_003E: dup
-			IL_003F: stloc.s   V_6
-			IL_0041: brfalse.s IL_0049
+		IL_0012: ldarg.0
+		IL_0013: ldlen
+		IL_0014: conv.i4
+		IL_0015: conv.u
+		IL_0016: sizeof    uint8*
+		IL_001C: mul.ovf.un
+		IL_001D: localloc
+		IL_001F: stloc.0
+		IL_0020: ldc.i4.0
+		IL_0021: stloc.1
+		IL_0022: br.s      IL_005B
+		// loop start (head: IL_005B)
+			IL_0024: call      class [System.Runtime]System.Text.Encoding [System.Runtime]System.Text.Encoding::get_ASCII()
+			IL_0029: ldarg.0
+			IL_002A: ldloc.1
+			IL_002B: ldelem.ref
+			IL_002C: callvirt  instance uint8[] [System.Runtime]System.Text.Encoding::GetBytes(string)
+			IL_0031: dup
+			IL_0032: stloc.3
+			IL_0033: brfalse.s IL_003A
 
-			IL_0043: ldloc.s   V_6
-			IL_0045: ldlen
-			IL_0046: conv.i4
-			IL_0047: brtrue.s  IL_004F
+			IL_0035: ldloc.3
+			IL_0036: ldlen
+			IL_0037: conv.i4
+			IL_0038: brtrue.s  IL_003F
 
-			IL_0049: ldc.i4.0
-			IL_004A: conv.u
-			IL_004B: stloc.s   V_5
-			IL_004D: br.s      IL_005A
+			IL_003A: ldc.i4.0
+			IL_003B: conv.u
+			IL_003C: stloc.2
+			IL_003D: br.s      IL_0048
 
-			IL_004F: ldloc.s   V_6
-			IL_0051: ldc.i4.0
-			IL_0052: ldelema   [System.Runtime]System.Byte
-			IL_0057: conv.u
-			IL_0058: stloc.s   V_5
+			IL_003F: ldloc.3
+			IL_0040: ldc.i4.0
+			IL_0041: ldelema   [System.Runtime]System.Byte
+			IL_0046: conv.u
+			IL_0047: stloc.2
 
-			IL_005A: ldloc.0
-			IL_005B: ldloc.3
-			IL_005C: conv.i
-			IL_005D: sizeof    uint8*
-			IL_0063: mul
-			IL_0064: add
-			IL_0065: ldloc.s   V_5
-			IL_0067: stind.i
-			IL_0068: ldnull
-			IL_0069: stloc.s   V_6
-			IL_006B: nop
-			IL_006C: ldloc.3
-			IL_006D: ldc.i4.1
-			IL_006E: add
-			IL_006F: stloc.3
+			IL_0048: ldloc.0
+			IL_0049: ldloc.1
+			IL_004A: conv.i
+			IL_004B: sizeof    uint8*
+			IL_0051: mul
+			IL_0052: add
+			IL_0053: ldloc.2
+			IL_0054: stind.i
+			IL_0055: ldnull
+			IL_0056: stloc.3
+			IL_0057: ldloc.1
+			IL_0058: ldc.i4.1
+			IL_0059: add
+			IL_005A: stloc.1
 
-			IL_0070: ldloc.3
-			IL_0071: ldarg.0
-			IL_0072: ldlen
-			IL_0073: conv.i4
-			IL_0074: clt
-			IL_0076: stloc.s   V_7
-			IL_0078: ldloc.s   V_7
-			IL_007A: brtrue.s  IL_002C
+			IL_005B: ldloc.1
+			IL_005C: ldarg.0
+			IL_005D: ldlen
+			IL_005E: conv.i4
+			IL_005F: blt.s     IL_0024
 		// end loop
 
-		IL_007C: ldarg.0
-		IL_007D: ldlen
-		IL_007E: conv.i4
-		IL_007F: ldloc.0
-		IL_0080: call      int32 Main::main(int32, native int)
-		IL_0085: stloc.2
-		IL_0086: br.s      IL_0088
-
-		IL_0088: ldloc.2
-		IL_0089: ret
+		IL_0061: ldarg.0
+		IL_0062: ldlen
+		IL_0063: conv.i4
+		IL_0064: ldloc.0
+		IL_0065: call      int32 Main::main(int32, native int)
+		IL_006A: ret
 	} // end of method Main::Main
 
 } // end of class Main
